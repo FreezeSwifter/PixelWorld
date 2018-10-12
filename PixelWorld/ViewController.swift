@@ -10,6 +10,7 @@ import UIKit
 import ParallaxHeader
 import Hero
 import Spring
+import YPImagePicker
 
 class ViewController: UIViewController {
     
@@ -22,6 +23,31 @@ class ViewController: UIViewController {
     lazy var additionalInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     lazy var isPushed = false
     
+    var pickConfig: YPImagePickerConfiguration = {
+        var config = YPImagePickerConfiguration()
+        config.library.mediaType = .photo
+        config.library.onlySquare  = false
+        config.onlySquareImagesFromCamera = true
+        config.targetImageSize = .original
+        config.usesFrontCamera = false
+        config.showsFilters = true
+        config.shouldSaveNewPicturesToAlbum = true
+       
+        config.albumName = "PixelWord"
+        config.screens = [.library, .photo]
+        config.startOnScreen = .library
+        config.showsCrop = .none
+        config.wordings.libraryTitle = "PixelWord"
+        config.hidesStatusBar = false
+        config.library.maxNumberOfItems = 1
+        config.library.minNumberOfItems = 1
+        config.library.numberOfItemsInRow = 3
+        config.library.spacingBetweenItems = 2
+        config.isScrollToChangeModesEnabled = false
+        return config
+    }()
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         isPushed = false
@@ -30,9 +56,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupPickerNavigationFont()
         setupCollectionView()
         setupButtons()
         photoCollectionView.hero.id = "ironMan"
+        
     }
     
     func setupButtons() {
@@ -42,6 +70,8 @@ class ViewController: UIViewController {
             self.pickButton.duration = 1
             self.pickButton.animate()
         }
+        
+        pickButton.addTarget(self, action: #selector(pickAction(_:)), for: UIControl.Event.touchUpInside)
     }
     
     func setupCollectionView() {
@@ -90,6 +120,41 @@ class ViewController: UIViewController {
         }
     }
     
+    @objc func pickAction(_ button: SpringButton) {
+        let picker = YPImagePicker(configuration: pickConfig)
+        picker.didFinishPicking { [unowned picker] items, _ in
+            if let photo = items.singlePhoto {
+                print(photo.fromCamera) // Image source (camera or library)
+                print(photo.image) // Final image selected by the user
+                print(photo.originalImage) // original image selected by the user, unfiltered
+                print(photo.modifiedImage) // Transformed image, can be nil
+                print(photo.exifMeta) // Print exif meta data of original image.
+            }
+            picker.dismiss(animated: true, completion: nil)
+        }
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func setupPickerNavigationFont() {
+        
+        guard let customFont = UIFont(name: "DisposableDroidBB-Bold", size: 22) else {
+            fatalError("""
+        Failed to load the "DisposableDroidBB-Bold" font.
+        Make sure the font file is included in the project and the font name is spelled correctly.
+        """
+            )
+        }
+        if #available(iOS 11.0, *) {
+            let f = UIFontMetrics.default.scaledFont(for: customFont)
+            let attributes = [NSAttributedString.Key.font : f]
+            UINavigationBar.appearance().titleTextAttributes = attributes // Title fonts
+            UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal) //
+        } else {
+            let attributes = [NSAttributedString.Key.font : customFont]
+            UINavigationBar.appearance().titleTextAttributes = attributes // Title fonts
+            UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal) //
+        }
+    }
 }
 
 
