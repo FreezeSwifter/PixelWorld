@@ -1,0 +1,75 @@
+PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - CryptoSwift (0.12.0)
+  - CSStickyHeaderFlowLayout (0.2.11)
+  - Hero (1.4.0)
+  - ParallaxHeader (2.0.0)
+  - PKHUD (5.2.0)
+  - PryntTrimmerView (3.0.0)
+  - Spring (1.0.6)
+  - SteviaLayout (4.4.0)
+  - YPImagePicker (3.5.2):
+    - PryntTrimmerView (~> 3.0.0)
+    - SteviaLayout (~> 4.4.0)
+
+DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - CryptoSwift
+  - CSStickyHeaderFlowLayout
+  - Hero (from `https://github.com/HeroTransitions/Hero.git`, branch `swift-4.2`)
+  - ParallaxHeader (from `https://github.com/FreezeSwifter/ParallaxHeader.git`)
+  - PKHUD (= 5.2.0)
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - YPImagePicker
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CryptoSwift
+    - CSStickyHeaderFlowLayout
+    - PKHUD
+    - PryntTrimmerView
+    - SteviaLayout
+    - YPImagePicker
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+  Hero:
+    :branch: swift-4.2
+    :git: https://github.com/HeroTransitions/Hero.git
+  ParallaxHeader:
+    :git: https://github.com/FreezeSwifter/ParallaxHeader.git
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
+  Hero:
+    :commit: 85be93ff80247296ee17f340bef73cfeb18c9fa0
+    :git: https://github.com/HeroTransitions/Hero.git
+  ParallaxHeader:
+    :commit: b74bf882b1546f572eb0899828041d5dcc260141
+    :git: https://github.com/FreezeSwifter/ParallaxHeader.git
+  Spring:
+    :commit: fafd0b2e8d4d46405bd86fa7ba84bb7f73a20b13
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
+  CSStickyHeaderFlowLayout: e9bcb1762413f49d7d09e5bd0ae5efd1100116b7
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  ParallaxHeader: 06a25d4063ea007c03f0e4e3901827f665877c5f
+  PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
+  PryntTrimmerView: 53ac64053c7ce63cb3e27f54090f52da0734891d
+  Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+  SteviaLayout: dd74d1abd127bbf0ce346ac9430441684fe427d0
+  YPImagePicker: 26d5bf7bfe1cffd1c5eedea3ac60422b314e2a42
+
+PODFILE CHECKSUM: e6dfbc25b2ef8f17a49a143b145f53798f0954d6
+
+COCOAPODS: 1.5.3

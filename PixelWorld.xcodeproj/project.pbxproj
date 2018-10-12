@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		427CE41A8C0330CADDE25BB9 /* Pods_PixelWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E0648DB3A2CEB3762E1C2 /* Pods_PixelWorld.framework */; };
+		9C2F7EFE21707D4E00DB30E4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */; };
+		9C3FC5C9216F279B009FE9C1 /* UIView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5C7216F279B009FE9C1 /* UIView+Blur.swift */; };
+		9C3FC5CA216F279B009FE9C1 /* UIAplication+RLT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5C8216F279B009FE9C1 /* UIAplication+RLT.swift */; };
+		9C3FC5CF216F3306009FE9C1 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC5CE216F3306009FE9C1 /* HomeHeaderView.xib */; };
+		9C3FC5D1216F331A009FE9C1 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5D0216F331A009FE9C1 /* HomeHeaderView.swift */; };
+		9C3FC5D4216F337C009FE9C1 /* ViewLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5D3216F337C009FE9C1 /* ViewLoader.swift */; };
+		9C3FC5D6216F3745009FE9C1 /* BouncyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5D5216F3745009FE9C1 /* BouncyLayout.swift */; };
+		9C3FC5D9216F3849009FE9C1 /* HomePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5D7216F3849009FE9C1 /* HomePhotoCell.swift */; };
+		9C3FC5DA216F3849009FE9C1 /* HomePhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC5D8216F3849009FE9C1 /* HomePhotoCell.xib */; };
+		9C3FC5DC216F3FC1009FE9C1 /* lost-places-1549096_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC5DB216F3FC1009FE9C1 /* lost-places-1549096_1280.jpg */; };
+		9C3FC5DE216F478C009FE9C1 /* Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5DD216F478C009FE9C1 /* Pixelate.swift */; };
+		9C3FC5E0216F47BD009FE9C1 /* PixelateLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5DF216F47BD009FE9C1 /* PixelateLayer.swift */; };
+		9C3FC5E2216F491E009FE9C1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5E1216F491E009FE9C1 /* UIImage+Extensions.swift */; };
+		9C3FC5F9216F541B009FE9C1 /* DisposableDroidBB_ital.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC5F5216F541B009FE9C1 /* DisposableDroidBB_ital.ttf */; };
+		9C3FC5FA216F541B009FE9C1 /* DisposableDroidBB_bld.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC5F6216F541B009FE9C1 /* DisposableDroidBB_bld.ttf */; };
+		9C3FC5FB216F541B009FE9C1 /* DisposableDroidBB_bldital.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC5F7216F541B009FE9C1 /* DisposableDroidBB_bldital.ttf */; };
+		9C3FC5FC216F541B009FE9C1 /* DisposableDroidBB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC5F8216F541B009FE9C1 /* DisposableDroidBB.ttf */; };
+		9C3FC600216F5AB4009FE9C1 /* AboutHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5FF216F5AB4009FE9C1 /* AboutHeaderView.swift */; };
+		9C3FC602216F5ABB009FE9C1 /* AboutHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC601216F5ABB009FE9C1 /* AboutHeaderView.xib */; };
+		9C3FC606216F6099009FE9C1 /* road-949832_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC605216F6099009FE9C1 /* road-949832_1280.jpg */; };
+		9C91E884216E11C200ABDFB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91E883216E11C200ABDFB8 /* AppDelegate.swift */; };
+		9C91E886216E11C200ABDFB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91E885216E11C200ABDFB8 /* ViewController.swift */; };
+		9C91E889216E11C200ABDFB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C91E887216E11C200ABDFB8 /* Main.storyboard */; };
+		9C91E88B216E11C400ABDFB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C91E88A216E11C400ABDFB8 /* Assets.xcassets */; };
+		9C91E88E216E11C400ABDFB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C91E88C216E11C400ABDFB8 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		9C3FC5C7216F279B009FE9C1 /* UIView+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Blur.swift"; sourceTree = "<group>"; };
+		9C3FC5C8216F279B009FE9C1 /* UIAplication+RLT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAplication+RLT.swift"; sourceTree = "<group>"; };
+		9C3FC5CE216F3306009FE9C1 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		9C3FC5D0216F331A009FE9C1 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		9C3FC5D3216F337C009FE9C1 /* ViewLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLoader.swift; sourceTree = "<group>"; };
+		9C3FC5D5216F3745009FE9C1 /* BouncyLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncyLayout.swift; sourceTree = "<group>"; };
+		9C3FC5D7216F3849009FE9C1 /* HomePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoCell.swift; sourceTree = "<group>"; };
+		9C3FC5D8216F3849009FE9C1 /* HomePhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePhotoCell.xib; sourceTree = "<group>"; };
+		9C3FC5DB216F3FC1009FE9C1 /* lost-places-1549096_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lost-places-1549096_1280.jpg"; sourceTree = "<group>"; };
+		9C3FC5DD216F478C009FE9C1 /* Pixelate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixelate.swift; sourceTree = "<group>"; };
+		9C3FC5DF216F47BD009FE9C1 /* PixelateLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelateLayer.swift; sourceTree = "<group>"; };
+		9C3FC5E1216F491E009FE9C1 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		9C3FC5F5216F541B009FE9C1 /* DisposableDroidBB_ital.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DisposableDroidBB_ital.ttf; sourceTree = "<group>"; };
+		9C3FC5F6216F541B009FE9C1 /* DisposableDroidBB_bld.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DisposableDroidBB_bld.ttf; sourceTree = "<group>"; };
+		9C3FC5F7216F541B009FE9C1 /* DisposableDroidBB_bldital.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DisposableDroidBB_bldital.ttf; sourceTree = "<group>"; };
+		9C3FC5F8216F541B009FE9C1 /* DisposableDroidBB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DisposableDroidBB.ttf; sourceTree = "<group>"; };
+		9C3FC5FF216F5AB4009FE9C1 /* AboutHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHeaderView.swift; sourceTree = "<group>"; };
+		9C3FC601216F5ABB009FE9C1 /* AboutHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutHeaderView.xib; sourceTree = "<group>"; };
+		9C3FC605216F6099009FE9C1 /* road-949832_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "road-949832_1280.jpg"; sourceTree = "<group>"; };
+		9C91E880216E11C200ABDFB8 /* PixelWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C91E883216E11C200ABDFB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C91E885216E11C200ABDFB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C91E888216E11C200ABDFB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C91E88A216E11C400ABDFB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C91E88D216E11C400ABDFB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C91E88F216E11C400ABDFB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB8E0648DB3A2CEB3762E1C2 /* Pods_PixelWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixelWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0C065142B803F18773327E /* Pods-PixelWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld.debug.xcconfig"; sourceTree = "<group>"; };
+		ED3CF5A836BDC13F54AC2282 /* Pods-PixelWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C91E87D216E11C200ABDFB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				427CE41A8C0330CADDE25BB9 /* Pods_PixelWorld.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86F2F844A36E696DA2BC4BE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB8E0648DB3A2CEB3762E1C2 /* Pods_PixelWorld.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C3FC5C5216F2755009FE9C1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9C91E88C216E11C400ABDFB8 /* LaunchScreen.storyboard */,
+				9C91E887216E11C200ABDFB8 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9C3FC5C6216F2766009FE9C1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9C3FC5C8216F279B009FE9C1 /* UIAplication+RLT.swift */,
+				9C3FC5C7216F279B009FE9C1 /* UIView+Blur.swift */,
+				9C3FC5E1216F491E009FE9C1 /* UIImage+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9C3FC5CD216F32E5009FE9C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C3FC5D0216F331A009FE9C1 /* HomeHeaderView.swift */,
+				9C3FC5CE216F3306009FE9C1 /* HomeHeaderView.xib */,
+				9C3FC5D7216F3849009FE9C1 /* HomePhotoCell.swift */,
+				9C3FC5D8216F3849009FE9C1 /* HomePhotoCell.xib */,
+				9C3FC5FF216F5AB4009FE9C1 /* AboutHeaderView.swift */,
+				9C3FC601216F5ABB009FE9C1 /* AboutHeaderView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9C3FC5D2216F3345009FE9C1 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				9C3FC5D3216F337C009FE9C1 /* ViewLoader.swift */,
+				9C3FC5D5216F3745009FE9C1 /* BouncyLayout.swift */,
+				9C3FC5DD216F478C009FE9C1 /* Pixelate.swift */,
+				9C3FC5DF216F47BD009FE9C1 /* PixelateLayer.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		9C3FC5F4216F5411009FE9C1 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9C3FC5F6216F541B009FE9C1 /* DisposableDroidBB_bld.ttf */,
+				9C3FC5F7216F541B009FE9C1 /* DisposableDroidBB_bldital.ttf */,
+				9C3FC5F5216F541B009FE9C1 /* DisposableDroidBB_ital.ttf */,
+				9C3FC5F8216F541B009FE9C1 /* DisposableDroidBB.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		9C91E877216E11C200ABDFB8 = {
+			isa = PBXGroup;
+			children = (
+				9C91E882216E11C200ABDFB8 /* PixelWorld */,
+				9C91E881216E11C200ABDFB8 /* Products */,
+				D779B26BA4E6411E357DD134 /* Pods */,
+				86F2F844A36E696DA2BC4BE2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9C91E881216E11C200ABDFB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C91E880216E11C200ABDFB8 /* PixelWorld.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C91E882216E11C200ABDFB8 /* PixelWorld */ = {
+			isa = PBXGroup;
+			children = (
+				9C3FC5F4216F5411009FE9C1 /* Font */,
+				9C3FC5D2216F3345009FE9C1 /* Tools */,
+				9C3FC5CD216F32E5009FE9C1 /* Views */,
+				9C3FC5C6216F2766009FE9C1 /* Extension */,
+				9C3FC5C5216F2755009FE9C1 /* UI */,
+				9C91E883216E11C200ABDFB8 /* AppDelegate.swift */,
+				9C91E885216E11C200ABDFB8 /* ViewController.swift */,
+				9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */,
+				9C3FC605216F6099009FE9C1 /* road-949832_1280.jpg */,
+				9C3FC5DB216F3FC1009FE9C1 /* lost-places-1549096_1280.jpg */,
+				9C91E88A216E11C400ABDFB8 /* Assets.xcassets */,
+				9C91E88F216E11C400ABDFB8 /* Info.plist */,
+			);
+			path = PixelWorld;
+			sourceTree = "<group>";
+		};
+		D779B26BA4E6411E357DD134 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C065142B803F18773327E /* Pods-PixelWorld.debug.xcconfig */,
+				ED3CF5A836BDC13F54AC2282 /* Pods-PixelWorld.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C91E87F216E11C200ABDFB8 /* PixelWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C91E892216E11C400ABDFB8 /* Build configuration list for PBXNativeTarget "PixelWorld" */;
+			buildPhases = (
+				01039068A8DA1372E4776181 /* [CP] Check Pods Manifest.lock */,
+				9C91E87C216E11C200ABDFB8 /* Sources */,
+				9C91E87D216E11C200ABDFB8 /* Frameworks */,
+				9C91E87E216E11C200ABDFB8 /* Resources */,
+				C051AD43B471F488553C798E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PixelWorld;
+			productName = PixelWorld;
+			productReference = 9C91E880216E11C200ABDFB8 /* PixelWorld.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C91E878216E11C200ABDFB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = mugua;
+				TargetAttributes = {
+					9C91E87F216E11C200ABDFB8 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 9C91E87B216E11C200ABDFB8 /* Build configuration list for PBXProject "PixelWorld" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C91E877216E11C200ABDFB8;
+			productRefGroup = 9C91E881216E11C200ABDFB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C91E87F216E11C200ABDFB8 /* PixelWorld */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C91E87E216E11C200ABDFB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3FC5CF216F3306009FE9C1 /* HomeHeaderView.xib in Resources */,
+				9C3FC602216F5ABB009FE9C1 /* AboutHeaderView.xib in Resources */,
+				9C91E88E216E11C400ABDFB8 /* LaunchScreen.storyboard in Resources */,
+				9C3FC5FA216F541B009FE9C1 /* DisposableDroidBB_bld.ttf in Resources */,
+				9C3FC5FC216F541B009FE9C1 /* DisposableDroidBB.ttf in Resources */,
+				9C3FC5F9216F541B009FE9C1 /* DisposableDroidBB_ital.ttf in Resources */,
+				9C3FC5DA216F3849009FE9C1 /* HomePhotoCell.xib in Resources */,
+				9C91E88B216E11C400ABDFB8 /* Assets.xcassets in Resources */,
+				9C91E889216E11C200ABDFB8 /* Main.storyboard in Resources */,
+				9C3FC5DC216F3FC1009FE9C1 /* lost-places-1549096_1280.jpg in Resources */,
+				9C3FC5FB216F541B009FE9C1 /* DisposableDroidBB_bldital.ttf in Resources */,
+				9C3FC606216F6099009FE9C1 /* road-949832_1280.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01039068A8DA1372E4776181 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PixelWorld-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C051AD43B471F488553C798E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ParallaxHeader/ParallaxHeader.framework",
+				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSStickyHeaderFlowLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParallaxHeader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C91E87C216E11C200ABDFB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3FC5CA216F279B009FE9C1 /* UIAplication+RLT.swift in Sources */,
+				9C3FC5D9216F3849009FE9C1 /* HomePhotoCell.swift in Sources */,
+				9C3FC5DE216F478C009FE9C1 /* Pixelate.swift in Sources */,
+				9C3FC5D1216F331A009FE9C1 /* HomeHeaderView.swift in Sources */,
+				9C3FC600216F5AB4009FE9C1 /* AboutHeaderView.swift in Sources */,
+				9C3FC5E2216F491E009FE9C1 /* UIImage+Extensions.swift in Sources */,
+				9C3FC5C9216F279B009FE9C1 /* UIView+Blur.swift in Sources */,
+				9C91E886216E11C200ABDFB8 /* ViewController.swift in Sources */,
+				9C91E884216E11C200ABDFB8 /* AppDelegate.swift in Sources */,
+				9C3FC5D6216F3745009FE9C1 /* BouncyLayout.swift in Sources */,
+				9C3FC5D4216F337C009FE9C1 /* ViewLoader.swift in Sources */,
+				9C2F7EFE21707D4E00DB30E4 /* AboutViewController.swift in Sources */,
+				9C3FC5E0216F47BD009FE9C1 /* PixelateLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C91E887216E11C200ABDFB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C91E888216E11C200ABDFB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C91E88C216E11C400ABDFB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C91E88D216E11C400ABDFB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C91E890216E11C400ABDFB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C91E891216E11C400ABDFB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C91E893216E11C400ABDFB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA0C065142B803F18773327E /* Pods-PixelWorld.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UR9T6JCF3L;
+				INFOPLIST_FILE = PixelWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.why.PixelWorld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C91E894216E11C400ABDFB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED3CF5A836BDC13F54AC2282 /* Pods-PixelWorld.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UR9T6JCF3L;
+				INFOPLIST_FILE = PixelWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.why.PixelWorld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C91E87B216E11C200ABDFB8 /* Build configuration list for PBXProject "PixelWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C91E890216E11C400ABDFB8 /* Debug */,
+				9C91E891216E11C400ABDFB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C91E892216E11C400ABDFB8 /* Build configuration list for PBXNativeTarget "PixelWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C91E893216E11C400ABDFB8 /* Debug */,
+				9C91E894216E11C400ABDFB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C91E878216E11C200ABDFB8 /* Project object */;
+}

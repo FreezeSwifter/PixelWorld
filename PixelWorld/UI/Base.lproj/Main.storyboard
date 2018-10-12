@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DisposableDroidBB_bld.ttf">
+            <string>DisposableDroidBB-Bold</string>
+        </array>
+        <array key="DisposableDroidBB_ital.ttf">
+            <string>DisposableDroidBB-Italic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--About View Controller-->
+        <scene sceneID="7pv-Wh-c1l">
+            <objects>
+                <tableViewController storyboardIdentifier="AboutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NF1-E3-9io" customClass="AboutViewController" customModule="PixelWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h1Q-Qn-DAK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="LiH-Wp-kcB">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="300" id="koF-Bc-R3u">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="koF-Bc-R3u" id="Jju-fb-cFa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gcc-7d-3HM">
+                                                    <rect key="frame" x="16" y="26" width="153" height="108"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G51-XU-uCS" customClass="SpringLabel" customModule="Spring">
+                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="36"/>
+                                                            <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="30"/>
+                                                            <color key="textColor" red="0.023529411760000001" green="0.10980392160000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOi-l4-y8n" customClass="SpringLabel" customModule="Spring">
+                                                            <rect key="frame" x="0.0" y="36" width="63.5" height="36"/>
+                                                            <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="36"/>
+                                                            <color key="textColor" red="0.023529411760000001" green="0.10980392160000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pixel Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIS-x8-9vE" customClass="SpringLabel" customModule="Spring">
+                                                            <rect key="frame" x="0.0" y="72" width="153" height="36"/>
+                                                            <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="36"/>
+                                                            <color key="textColor" red="0.023529411760000001" green="0.10980392160000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pixel film emulator created with passion by tow friend, street-photography passionist: @ WHY, WLQ &amp; code magician." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3V-jA-Ie5" customClass="SpringLabel" customModule="Spring">
+                                                    <rect key="frame" x="16" y="142" width="343" height="130"/>
+                                                    <fontDescription key="fontDescription" name="DisposableDroidBB-Italic" family="DisposableDroid BB" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gcc-7d-3HM" firstAttribute="top" secondItem="Jju-fb-cFa" secondAttribute="top" constant="26" id="0x0-9G-WKq"/>
+                                                <constraint firstAttribute="trailing" secondItem="r3V-jA-Ie5" secondAttribute="trailing" constant="16" id="PY2-lb-ICF"/>
+                                                <constraint firstItem="gcc-7d-3HM" firstAttribute="leading" secondItem="Jju-fb-cFa" secondAttribute="leading" constant="16" id="eMU-FT-bIO"/>
+                                                <constraint firstItem="r3V-jA-Ie5" firstAttribute="leading" secondItem="gcc-7d-3HM" secondAttribute="leading" id="l9g-Mw-YHB"/>
+                                                <constraint firstItem="r3V-jA-Ie5" firstAttribute="top" secondItem="gcc-7d-3HM" secondAttribute="bottom" constant="8" id="wZH-F0-yc9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="160" id="xhL-nY-Z98">
+                                        <rect key="frame" x="0.0" y="300" width="375" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xhL-nY-Z98" id="vc7-sW-HTQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ghL-wA-WKL">
+                                                    <rect key="frame" x="16" y="0.0" width="29" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcI-CS-wt8" customClass="SpringLabel" customModule="Spring">
+                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="30"/>
+                                                            <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="30"/>
+                                                            <color key="textColor" red="0.023529411760000001" green="0.10980392160000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to know how this app has been made? Check for constant updates at: lformeus18@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJo-8O-H0K" customClass="SpringLabel" customModule="Spring">
+                                                    <rect key="frame" x="16" y="38" width="343" height="104"/>
+                                                    <fontDescription key="fontDescription" name="DisposableDroidBB-Italic" family="DisposableDroid BB" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kJo-8O-H0K" firstAttribute="top" secondItem="ghL-wA-WKL" secondAttribute="bottom" constant="8" id="4KT-mA-7Cz"/>
+                                                <constraint firstItem="ghL-wA-WKL" firstAttribute="leading" secondItem="vc7-sW-HTQ" secondAttribute="leading" constant="16" id="L0P-8D-3Vq"/>
+                                                <constraint firstItem="kJo-8O-H0K" firstAttribute="leading" secondItem="ghL-wA-WKL" secondAttribute="leading" id="ci8-SN-4ZD"/>
+                                                <constraint firstItem="ghL-wA-WKL" firstAttribute="top" secondItem="vc7-sW-HTQ" secondAttribute="top" id="wjV-Sa-H74"/>
+                                                <constraint firstAttribute="trailing" secondItem="kJo-8O-H0K" secondAttribute="trailing" constant="16" id="ybg-VT-sMe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="300" id="Eb6-gp-3bc">
+                                        <rect key="frame" x="0.0" y="460" width="375" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eb6-gp-3bc" id="0tZ-13-R4W">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nmm-8I-X8O">
+                                                    <rect key="frame" x="16" y="0.0" width="158.5" height="72"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bh3-pm-0pF" customClass="SpringLabel" customModule="Spring">
+                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="36"/>
+                                                            <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="30"/>
+                                                            <color key="textColor" red="0.023529411760000001" green="0.10980392160000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCLAIMER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuQ-XQ-YwT" customClass="SpringLabel" customModule="Spring">
+                                                            <rect key="frame" x="0.0" y="36" width="158.5" height="36"/>
+                                                            <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="36"/>
+                                                            <color key="textColor" red="0.023529411760000001" green="0.10980392160000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6v-cr-vQJ" customClass="SpringLabel" customModule="Spring">
+                                                    <rect key="frame" x="16" y="80" width="343" height="156"/>
+                                                    <string key="text">The film names are all trademarks and copyrights property of their respective owners. None of the film producers endorse or sponsor PIXEL WORLD.</string>
+                                                    <fontDescription key="fontDescription" name="DisposableDroidBB-Italic" family="DisposableDroid BB" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nmm-8I-X8O" firstAttribute="top" secondItem="0tZ-13-R4W" secondAttribute="top" id="9Rs-fY-l9I"/>
+                                                <constraint firstItem="R6v-cr-vQJ" firstAttribute="top" secondItem="nmm-8I-X8O" secondAttribute="bottom" constant="8" id="DXw-9h-UzO"/>
+                                                <constraint firstAttribute="trailing" secondItem="R6v-cr-vQJ" secondAttribute="trailing" constant="16" id="Fa6-Re-uGo"/>
+                                                <constraint firstItem="nmm-8I-X8O" firstAttribute="leading" secondItem="0tZ-13-R4W" secondAttribute="leading" constant="16" id="TFV-eH-mUa"/>
+                                                <constraint firstItem="R6v-cr-vQJ" firstAttribute="leading" secondItem="nmm-8I-X8O" secondAttribute="leading" id="fgC-Pl-75x"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="NF1-E3-9io" id="cus-px-L5H"/>
+                            <outlet property="delegate" destination="NF1-E3-9io" id="2qz-lu-598"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="r3V-jA-Ie5" id="UYQ-Tf-WoB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zD4-3S-bvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-666.39999999999998" y="-2.2488755622188905"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PixelWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sBK-DE-YQG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="582"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="0l5-iq-D1l"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PA5-iy-TRa">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="c8S-Rl-x8a">
+                                <rect key="frame" x="119.5" y="602" width="136" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L09-EF-oza">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="65"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzf-cs-zug" customClass="SpringButton" customModule="Spring">
+                                        <rect key="frame" x="45" y="0.0" width="46" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="SiL-2l-eod"/>
+                                        </constraints>
+                                        <state key="normal" image="pick_img_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr9-Ig-7UV">
+                                        <rect key="frame" x="106" y="0.0" width="30" height="65"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c8S-Rl-x8a" secondAttribute="bottom" id="3ZC-E4-hdQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sBK-DE-YQG" secondAttribute="trailing" id="9nG-a2-Try"/>
+                            <constraint firstItem="c8S-Rl-x8a" firstAttribute="top" secondItem="sBK-DE-YQG" secondAttribute="bottom" id="L6V-W0-FP6"/>
+                            <constraint firstItem="c8S-Rl-x8a" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cib-gD-l8k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sBK-DE-YQG" secondAttribute="bottom" constant="65" id="rFu-Ad-nFf"/>
+                            <constraint firstItem="sBK-DE-YQG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rJj-Tk-Btr"/>
+                            <constraint firstItem="sBK-DE-YQG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uid-Dw-rry"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoCollectionView" destination="sBK-DE-YQG" id="Gxx-JG-hvz"/>
+                        <outlet property="pickButton" destination="Dzf-cs-zug" id="AYL-UW-5I7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pick_img_icon" width="20" height="20"/>
+    </resources>
+</document>
