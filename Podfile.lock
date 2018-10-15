@@ -2,12 +2,16 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - CryptoSwift (0.12.0)
   - CSStickyHeaderFlowLayout (0.2.11)
   - Hero (1.4.0)
   - ParallaxHeader (2.0.0)
   - PKHUD (5.2.0)
   - PryntTrimmerView (3.0.0)
+  - Realm (3.11.0):
+    - Realm/Headers (= 3.11.0)
+  - Realm/Headers (3.11.0)
+  - RealmSwift (3.11.0):
+    - Realm (= 3.11.0)
   - Spring (1.0.6)
   - SteviaLayout (4.4.0)
   - YPImagePicker (3.5.2):
@@ -16,20 +20,21 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
-  - CryptoSwift
   - CSStickyHeaderFlowLayout
   - Hero (from `https://github.com/HeroTransitions/Hero.git`, branch `swift-4.2`)
   - ParallaxHeader (from `https://github.com/FreezeSwifter/ParallaxHeader.git`)
   - PKHUD (= 5.2.0)
+  - RealmSwift
   - Spring (from `https://github.com/MengTo/Spring.git`)
   - YPImagePicker
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - CryptoSwift
     - CSStickyHeaderFlowLayout
     - PKHUD
     - PryntTrimmerView
+    - Realm
+    - RealmSwift
     - SteviaLayout
     - YPImagePicker
 
@@ -60,16 +65,17 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
   CSStickyHeaderFlowLayout: e9bcb1762413f49d7d09e5bd0ae5efd1100116b7
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   ParallaxHeader: 06a25d4063ea007c03f0e4e3901827f665877c5f
   PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
   PryntTrimmerView: 53ac64053c7ce63cb3e27f54090f52da0734891d
+  Realm: 92f09a102692b96a9a10e9617f214f15c5ab85fc
+  RealmSwift: 5f0481cd658bb751c509314b964a35eaa264d2cf
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   SteviaLayout: dd74d1abd127bbf0ce346ac9430441684fe427d0
   YPImagePicker: 26d5bf7bfe1cffd1c5eedea3ac60422b314e2a42
 
-PODFILE CHECKSUM: e6dfbc25b2ef8f17a49a143b145f53798f0954d6
+PODFILE CHECKSUM: b859278400197f456584dae5093f8651ccc9869a
 
 COCOAPODS: 1.5.3

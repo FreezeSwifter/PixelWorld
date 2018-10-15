@@ -12,5 +12,5 @@ target 'PixelWorld' do
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git' 
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
   pod 'YPImagePicker'
-  pod 'CryptoSwift'
+  pod 'RealmSwift'
 end
