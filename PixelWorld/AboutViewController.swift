@@ -13,6 +13,10 @@ class AboutViewController: UITableViewController {
     let header: AboutHeaderView = ViewLoader.Xib.view()
     @IBOutlet weak var descriptionLabel: SpringLabel!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
