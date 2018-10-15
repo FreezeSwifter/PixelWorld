@@ -195,6 +195,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L09-EF-oza" customClass="SpringButton" customModule="Spring">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="65"/>
                                         <state key="normal" image="edit_icon"/>
+                                        <connections>
+                                            <action selector="editTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ejr-Nx-cmZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzf-cs-zug" customClass="SpringButton" customModule="Spring">
                                         <rect key="frame" x="61" y="0.0" width="46" height="65"/>
@@ -206,6 +209,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr9-Ig-7UV" customClass="SpringButton" customModule="Spring">
                                         <rect key="frame" x="122" y="0.0" width="46" height="65"/>
                                         <state key="normal" image="share_icon"/>
+                                        <connections>
+                                            <action selector="tapShareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQQ-q9-BrF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

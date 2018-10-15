@@ -232,6 +232,15 @@ class ViewController: UIViewController {
             UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal) //
         }
     }
+    
+    @IBAction func editTapAction(_ sender: SpringButton) {
+        // jump editVC
+    }
+    
+    
+    @IBAction func tapShareAction(_ sender: SpringButton) {
+        // jump shareVC
+    }
 }
 
 
