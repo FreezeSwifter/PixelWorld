@@ -190,22 +190,28 @@
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="c8S-Rl-x8a">
-                                <rect key="frame" x="119.5" y="602" width="136" height="65"/>
+                                <rect key="frame" x="103.5" y="602" width="168" height="65"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L09-EF-oza">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="65"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L09-EF-oza" customClass="SpringButton" customModule="Spring">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="65"/>
+                                        <state key="normal" image="edit_icon"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzf-cs-zug" customClass="SpringButton" customModule="Spring">
-                                        <rect key="frame" x="45" y="0.0" width="46" height="65"/>
+                                        <rect key="frame" x="61" y="0.0" width="46" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="SiL-2l-eod"/>
                                         </constraints>
                                         <state key="normal" image="pick_img_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr9-Ig-7UV">
-                                        <rect key="frame" x="106" y="0.0" width="30" height="65"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr9-Ig-7UV" customClass="SpringButton" customModule="Spring">
+                                        <rect key="frame" x="122" y="0.0" width="46" height="65"/>
+                                        <state key="normal" image="share_icon"/>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Dzf-cs-zug" firstAttribute="width" secondItem="Zr9-Ig-7UV" secondAttribute="width" id="I2A-ZH-dyl"/>
+                                    <constraint firstItem="L09-EF-oza" firstAttribute="width" secondItem="Dzf-cs-zug" secondAttribute="width" id="oRA-Hk-UIk"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -221,8 +227,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="editButton" destination="L09-EF-oza" id="xG9-CK-zcM"/>
                         <outlet property="photoCollectionView" destination="sBK-DE-YQG" id="Gxx-JG-hvz"/>
                         <outlet property="pickButton" destination="Dzf-cs-zug" id="AYL-UW-5I7"/>
+                        <outlet property="shareButton" destination="Zr9-Ig-7UV" id="qCU-8b-W9T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -230,6 +238,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="edit_icon" width="20" height="20"/>
         <image name="pick_img_icon" width="20" height="20"/>
+        <image name="share_icon" width="20" height="20"/>
     </resources>
 </document>

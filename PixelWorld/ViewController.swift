@@ -11,17 +11,32 @@ import ParallaxHeader
 import Hero
 import Spring
 import YPImagePicker
+import RealmSwift
+import ChameleonFramework
 
 class ViewController: UIViewController {
     
+    var notificationToken: NotificationToken? = nil
+    
     @IBOutlet weak var photoCollectionView: UICollectionView!
-    lazy var layout = BouncyLayout(style: .regular)
     let header: HomeHeaderView = ViewLoader.Xib.view()
     @IBOutlet weak var pickButton: SpringButton!
+    @IBOutlet weak var editButton: SpringButton! {
+        didSet {
+            editButton.isHidden = true
+        }
+    }
+    @IBOutlet weak var shareButton: SpringButton! {
+        didSet {
+            shareButton.isHidden = true
+        }
+    }
     
+    lazy var layout = BouncyLayout(style: .regular)
     lazy var insets = UIEdgeInsets(top: 200, left: 0, bottom: 200, right: 0)
     lazy var additionalInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     lazy var isPushed = false
+    lazy var dataSouce: [PhotoModel] = []
     
     var pickConfig: YPImagePickerConfiguration = {
         var config = YPImagePickerConfiguration()
@@ -30,9 +45,9 @@ class ViewController: UIViewController {
         config.onlySquareImagesFromCamera = true
         config.targetImageSize = .original
         config.usesFrontCamera = false
-        config.showsFilters = true
+        config.showsFilters = false
         config.shouldSaveNewPicturesToAlbum = true
-       
+        
         config.albumName = "PixelWord"
         config.screens = [.library, .photo]
         config.startOnScreen = .library
@@ -47,10 +62,17 @@ class ViewController: UIViewController {
         return config
     }()
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         isPushed = false
+    }
+    
+    deinit {
+        notificationToken?.invalidate()
     }
     
     override func viewDidLoad() {
@@ -59,8 +81,57 @@ class ViewController: UIViewController {
         setupPickerNavigationFont()
         setupCollectionView()
         setupButtons()
+        setupRealmObserver()
+        figureoutPhotoData()
         photoCollectionView.hero.id = "ironMan"
         
+    }
+    
+    func showButtonsAnimation() {
+        [shareButton, editButton].forEach{ btn in
+            btn?.isHidden = false
+            btn?.animation = "morph"
+            btn?.curve = "linear"
+            btn?.duration = 1.5
+            btn?.animate()
+        }
+    }
+    
+    func figureoutPhotoData() {
+        let realm = try! Realm()
+        let photos = realm.objects(PhotoModel.self)
+        dataSouce = Array(photos.sorted(byKeyPath: "createdTime"))
+        photoCollectionView.reloadData()
+    }
+    
+    func setupRealmObserver() {
+        
+        let realm = try! Realm()
+        let results = realm.objects(PhotoModel.self)
+        
+        notificationToken = results.observe { [weak self] (changes: RealmCollectionChange) in
+            guard let collectionView = self?.photoCollectionView else { return }
+            switch changes {
+            case .initial:
+                collectionView.reloadData()
+                
+            case .update(let newData, let deletions, let insertions, let modifications):
+                
+                self?.dataSouce = Array(newData)
+                
+                collectionView.performBatchUpdates({
+                    collectionView.insertItems(at: insertions.map { IndexPath(item: $0, section: 0) })
+                    collectionView.deleteItems(at: deletions.map { IndexPath(item: $0, section: 0) })
+                    collectionView.reloadItems(at: modifications.map { IndexPath(item: $0, section: 0) })
+                    
+                }, completion: { _ in })
+                
+                
+            case .error(let error):
+                
+                fatalError("\(error)")
+            }
+        }
     }
     
     func setupButtons() {
@@ -80,7 +151,7 @@ class ViewController: UIViewController {
         photoCollectionView.collectionViewLayout = layout
         photoCollectionView.translatesAutoresizingMaskIntoConstraints = false
         photoCollectionView.backgroundColor = UIColor.white
-        photoCollectionView.showsVerticalScrollIndicator = false
+        photoCollectionView.showsVerticalScrollIndicator = true
         photoCollectionView.showsHorizontalScrollIndicator = false
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
@@ -124,11 +195,17 @@ class ViewController: UIViewController {
         let picker = YPImagePicker(configuration: pickConfig)
         picker.didFinishPicking { [unowned picker] items, _ in
             if let photo = items.singlePhoto {
-                print(photo.fromCamera) // Image source (camera or library)
-                print(photo.image) // Final image selected by the user
-                print(photo.originalImage) // original image selected by the user, unfiltered
-                print(photo.modifiedImage) // Transformed image, can be nil
-                print(photo.exifMeta) // Print exif meta data of original image.
+                
+                print(photo.originalImage)
+                
+                let realm = try! Realm()
+                let p = PhotoModel()
+                p.filterName = "Original"
+                p.value = photo.originalImage.compressedData(quality: 0.9)
+                try! realm.write {
+                    realm.add(p)
+                }
+                
             }
             picker.dismiss(animated: true, completion: nil)
         }
@@ -160,18 +237,44 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! HomePhotoCell
+        if cell.isSelected == true {
+            cell.layer.borderWidth = 8
+            cell.layer.borderColor = UIColor.randomFlat.cgColor
+            
+            cell.photoView.curve = "pop"
+            cell.photoView.animation = "spring"
+            cell.photoView.duration = 1.0
+            cell.photoView.scaleY = 2
+            cell.photoView.scaleX = 2
+            cell.photoView.animate()
+        }
+        
+        showButtonsAnimation()
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! HomePhotoCell
+        if cell.isSelected == false {
+            cell.layer.borderColor = UIColor.clear.cgColor
+        }
+    }
+    
 }
 
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return dataSouce.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomePhotoCell", for: indexPath) as! HomePhotoCell
         
+        cell.configure(withDataSource: dataSouce[indexPath.item])
         return cell
     }
 }
