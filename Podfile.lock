@@ -1,8 +1,12 @@
 PODS:
+  - Action (3.8.0):
+    - RxCocoa (~> 4.3.0)
+    - RxSwift (~> 4.3.0)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - CSStickyHeaderFlowLayout (0.2.11)
+  - Differentiator (3.1.0)
   - Hero (1.4.0)
   - ParallaxHeader (2.0.0)
   - PKHUD (5.2.0)
@@ -12,30 +16,54 @@ PODS:
   - Realm/Headers (3.11.0)
   - RealmSwift (3.11.0):
     - Realm (= 3.11.0)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxRealm (0.7.5):
+    - RealmSwift (~> 3.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
   - Spring (1.0.6)
   - SteviaLayout (4.4.0)
+  - Then (2.4.0)
   - YPImagePicker (3.5.2):
     - PryntTrimmerView (~> 3.0.0)
     - SteviaLayout (~> 4.4.0)
 
 DEPENDENCIES:
+  - Action
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - CSStickyHeaderFlowLayout
   - Hero (from `https://github.com/HeroTransitions/Hero.git`, branch `swift-4.2`)
   - ParallaxHeader (from `https://github.com/FreezeSwifter/ParallaxHeader.git`)
   - PKHUD (= 5.2.0)
   - RealmSwift
+  - RxCocoa
+  - RxDataSources
+  - RxRealm
+  - RxSwift
   - Spring (from `https://github.com/MengTo/Spring.git`)
+  - Then
   - YPImagePicker
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Action
     - CSStickyHeaderFlowLayout
+    - Differentiator
     - PKHUD
     - PryntTrimmerView
     - Realm
     - RealmSwift
+    - RxCocoa
+    - RxDataSources
+    - RxRealm
+    - RxSwift
     - SteviaLayout
+    - Then
     - YPImagePicker
 
 EXTERNAL SOURCES:
@@ -64,18 +92,25 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  Action: 2275d04a407ecaf46a58d58a304388a28155a0a1
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CSStickyHeaderFlowLayout: e9bcb1762413f49d7d09e5bd0ae5efd1100116b7
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   ParallaxHeader: 06a25d4063ea007c03f0e4e3901827f665877c5f
   PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
   PryntTrimmerView: 53ac64053c7ce63cb3e27f54090f52da0734891d
   Realm: 92f09a102692b96a9a10e9617f214f15c5ab85fc
   RealmSwift: 5f0481cd658bb751c509314b964a35eaa264d2cf
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   SteviaLayout: dd74d1abd127bbf0ce346ac9430441684fe427d0
+  Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   YPImagePicker: 26d5bf7bfe1cffd1c5eedea3ac60422b314e2a42
 
-PODFILE CHECKSUM: b859278400197f456584dae5093f8651ccc9869a
+PODFILE CHECKSUM: 91af329196f638d285d06b0c0c841650f678298b
 
 COCOAPODS: 1.5.3

@@ -13,4 +13,10 @@ target 'PixelWorld' do
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
   pod 'YPImagePicker'
   pod 'RealmSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
+  pod 'Action'
+  pod 'Then'
+  pod "RxRealm"
 end

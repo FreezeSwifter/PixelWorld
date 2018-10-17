@@ -36,6 +36,7 @@
 		9C9E3E67217445A700C204D5 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E3E66217445A700C204D5 /* PhotoModel.swift */; };
 		9C9E3E6921747E3F00C204D5 /* HomePhotoCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E3E6821747E3F00C204D5 /* HomePhotoCellProtocol.swift */; };
 		9C9E3E6B2174A2E300C204D5 /* PixelFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E3E6A2174A2E300C204D5 /* PixelFilters.swift */; };
+		9CF59FD52175B81700CC5AE6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF59FD42175B81700CC5AE6 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		9C9E3E66217445A700C204D5 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		9C9E3E6821747E3F00C204D5 /* HomePhotoCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoCellProtocol.swift; sourceTree = "<group>"; };
 		9C9E3E6A2174A2E300C204D5 /* PixelFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelFilters.swift; sourceTree = "<group>"; };
+		9CF59FD42175B81700CC5AE6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BB8E0648DB3A2CEB3762E1C2 /* Pods_PixelWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixelWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0C065142B803F18773327E /* Pods-PixelWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld.debug.xcconfig"; sourceTree = "<group>"; };
 		ED3CF5A836BDC13F54AC2282 /* Pods-PixelWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		9C91E882216E11C200ABDFB8 /* PixelWorld */ = {
 			isa = PBXGroup;
 			children = (
+				9CF59FD32175B7FF00CC5AE6 /* ViewModels */,
 				9C9E3E652174450D00C204D5 /* RealmModels */,
 				9C3FC5F4216F5411009FE9C1 /* Font */,
 				9C3FC5D2216F3345009FE9C1 /* Tools */,
@@ -194,6 +197,14 @@
 				9C9E3E66217445A700C204D5 /* PhotoModel.swift */,
 			);
 			path = RealmModels;
+			sourceTree = "<group>";
+		};
+		9CF59FD32175B7FF00CC5AE6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9CF59FD42175B81700CC5AE6 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D779B26BA4E6411E357DD134 /* Pods */ = {
@@ -308,30 +319,44 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ParallaxHeader/ParallaxHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSStickyHeaderFlowLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParallaxHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF59FD52175B81700CC5AE6 /* HomeViewModel.swift in Sources */,
 				9C3FC5CA216F279B009FE9C1 /* UIAplication+RLT.swift in Sources */,
 				9C3FC5D9216F3849009FE9C1 /* HomePhotoCell.swift in Sources */,
 				9C3FC5DE216F478C009FE9C1 /* Pixelate.swift in Sources */,
@@ -512,10 +538,7 @@
 				DEVELOPMENT_TEAM = UR9T6JCF3L;
 				INFOPLIST_FILE = PixelWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.PixelWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -532,10 +555,7 @@
 				DEVELOPMENT_TEAM = UR9T6JCF3L;
 				INFOPLIST_FILE = PixelWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.PixelWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
