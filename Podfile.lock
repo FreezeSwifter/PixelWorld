@@ -11,6 +11,8 @@ PODS:
   - ParallaxHeader (2.0.0)
   - PKHUD (5.2.0)
   - PryntTrimmerView (3.0.0)
+  - ReactorKit (1.2.0):
+    - RxSwift (>= 4.0.0)
   - Realm (3.11.0):
     - Realm/Headers (= 3.11.0)
   - Realm/Headers (3.11.0)
@@ -40,6 +42,7 @@ DEPENDENCIES:
   - Hero (from `https://github.com/HeroTransitions/Hero.git`, branch `swift-4.2`)
   - ParallaxHeader (from `https://github.com/FreezeSwifter/ParallaxHeader.git`)
   - PKHUD (= 5.2.0)
+  - ReactorKit
   - RealmSwift
   - RxCocoa
   - RxDataSources
@@ -56,6 +59,7 @@ SPEC REPOS:
     - Differentiator
     - PKHUD
     - PryntTrimmerView
+    - ReactorKit
     - Realm
     - RealmSwift
     - RxCocoa
@@ -100,6 +104,7 @@ SPEC CHECKSUMS:
   ParallaxHeader: 06a25d4063ea007c03f0e4e3901827f665877c5f
   PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
   PryntTrimmerView: 53ac64053c7ce63cb3e27f54090f52da0734891d
+  ReactorKit: 18ca466f1e77fef1827addeb921fba8ae14edd63
   Realm: 92f09a102692b96a9a10e9617f214f15c5ab85fc
   RealmSwift: 5f0481cd658bb751c509314b964a35eaa264d2cf
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
@@ -111,6 +116,6 @@ SPEC CHECKSUMS:
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   YPImagePicker: 26d5bf7bfe1cffd1c5eedea3ac60422b314e2a42
 
-PODFILE CHECKSUM: 91af329196f638d285d06b0c0c841650f678298b
+PODFILE CHECKSUM: 54fb9216b579bea02ef776e72dc4d73553eac0ad
 
 COCOAPODS: 1.5.3

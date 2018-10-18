@@ -18,5 +18,6 @@ target 'PixelWorld' do
   pod 'RxDataSources'
   pod 'Action'
   pod 'Then'
-  pod "RxRealm"
+  pod 'RxRealm'
+  pod 'ReactorKit'
 end
