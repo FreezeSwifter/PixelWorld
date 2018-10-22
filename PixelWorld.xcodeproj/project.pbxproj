@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		427CE41A8C0330CADDE25BB9 /* Pods_PixelWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E0648DB3A2CEB3762E1C2 /* Pods_PixelWorld.framework */; };
 		9C2F7EFE21707D4E00DB30E4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */; };
+		9C30040921787A7D00C15ADE /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C30040721787A7C00C15ADE /* NSObject+Rx.swift */; };
+		9C30040A21787A7D00C15ADE /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C30040821787A7D00C15ADE /* HasDisposeBag.swift */; };
 		9C3FC5C9216F279B009FE9C1 /* UIView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5C7216F279B009FE9C1 /* UIView+Blur.swift */; };
 		9C3FC5CA216F279B009FE9C1 /* UIAplication+RLT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5C8216F279B009FE9C1 /* UIAplication+RLT.swift */; };
 		9C3FC5CF216F3306009FE9C1 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC5CE216F3306009FE9C1 /* HomeHeaderView.xib */; };
@@ -36,11 +38,14 @@
 		9C9E3E67217445A700C204D5 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E3E66217445A700C204D5 /* PhotoModel.swift */; };
 		9C9E3E6921747E3F00C204D5 /* HomePhotoCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E3E6821747E3F00C204D5 /* HomePhotoCellProtocol.swift */; };
 		9C9E3E6B2174A2E300C204D5 /* PixelFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E3E6A2174A2E300C204D5 /* PixelFilters.swift */; };
+		9CD6CFDA2179CD1900DEE2C0 /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6CFD92179CD1900DEE2C0 /* TaskService.swift */; };
 		9CF59FD52175B81700CC5AE6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF59FD42175B81700CC5AE6 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		9C30040721787A7C00C15ADE /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
+		9C30040821787A7D00C15ADE /* HasDisposeBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasDisposeBag.swift; sourceTree = "<group>"; };
 		9C3FC5C7216F279B009FE9C1 /* UIView+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Blur.swift"; sourceTree = "<group>"; };
 		9C3FC5C8216F279B009FE9C1 /* UIAplication+RLT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAplication+RLT.swift"; sourceTree = "<group>"; };
 		9C3FC5CE216F3306009FE9C1 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 		9C9E3E66217445A700C204D5 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		9C9E3E6821747E3F00C204D5 /* HomePhotoCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoCellProtocol.swift; sourceTree = "<group>"; };
 		9C9E3E6A2174A2E300C204D5 /* PixelFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelFilters.swift; sourceTree = "<group>"; };
+		9CD6CFD92179CD1900DEE2C0 /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		9CF59FD42175B81700CC5AE6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BB8E0648DB3A2CEB3762E1C2 /* Pods_PixelWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixelWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0C065142B803F18773327E /* Pods-PixelWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +114,8 @@
 		9C3FC5C6216F2766009FE9C1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9C30040821787A7D00C15ADE /* HasDisposeBag.swift */,
+				9C30040721787A7C00C15ADE /* NSObject+Rx.swift */,
 				9C3FC5C8216F279B009FE9C1 /* UIAplication+RLT.swift */,
 				9C3FC5C7216F279B009FE9C1 /* UIView+Blur.swift */,
 				9C3FC5E1216F491E009FE9C1 /* UIImage+Extensions.swift */,
@@ -203,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				9CF59FD42175B81700CC5AE6 /* HomeViewModel.swift */,
+				9CD6CFD92179CD1900DEE2C0 /* TaskService.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -373,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD6CFDA2179CD1900DEE2C0 /* TaskService.swift in Sources */,
 				9CF59FD52175B81700CC5AE6 /* HomeViewModel.swift in Sources */,
 				9C3FC5CA216F279B009FE9C1 /* UIAplication+RLT.swift in Sources */,
 				9C3FC5D9216F3849009FE9C1 /* HomePhotoCell.swift in Sources */,
@@ -381,6 +391,7 @@
 				9C9E3E67217445A700C204D5 /* PhotoModel.swift in Sources */,
 				9C9E3E6921747E3F00C204D5 /* HomePhotoCellProtocol.swift in Sources */,
 				9C3FC600216F5AB4009FE9C1 /* AboutHeaderView.swift in Sources */,
+				9C30040A21787A7D00C15ADE /* HasDisposeBag.swift in Sources */,
 				9C3FC5E2216F491E009FE9C1 /* UIImage+Extensions.swift in Sources */,
 				9C9E3E6B2174A2E300C204D5 /* PixelFilters.swift in Sources */,
 				9C3FC5C9216F279B009FE9C1 /* UIView+Blur.swift in Sources */,
@@ -390,6 +401,7 @@
 				9C3FC5D4216F337C009FE9C1 /* ViewLoader.swift in Sources */,
 				9C2F7EFE21707D4E00DB30E4 /* AboutViewController.swift in Sources */,
 				9C3FC5E0216F47BD009FE9C1 /* PixelateLayer.swift in Sources */,
+				9C30040921787A7D00C15ADE /* NSObject+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +552,10 @@
 				DEVELOPMENT_TEAM = UR9T6JCF3L;
 				INFOPLIST_FILE = PixelWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.PixelWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -557,7 +572,10 @@
 				DEVELOPMENT_TEAM = UR9T6JCF3L;
 				INFOPLIST_FILE = PixelWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.PixelWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
