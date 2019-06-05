@@ -14,6 +14,7 @@ class PhotoModel: Object {
     @objc dynamic var createdTime = Date()
     @objc dynamic var filterName: String? = nil
     @objc dynamic var value: Data? = nil
+    @objc dynamic var filterType: Int = 0
     
     override static func indexedProperties() -> [String] {
         return ["createdTime"]
@@ -28,6 +29,10 @@ extension PhotoModel: HomePhotoCellDataSource {
     
     var title: String {
         return filterName ?? ""
+    }
+    
+    func getImage() -> UIImage {
+        return UIImage(data: imageValue) ?? UIImage()
     }
 }
 

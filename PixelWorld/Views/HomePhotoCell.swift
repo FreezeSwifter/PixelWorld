@@ -18,6 +18,24 @@ class HomePhotoCell: UICollectionViewCell {
     
     private let formatter = DateFormatter()
     
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                layer.borderWidth = 8
+                layer.borderColor = UIColor.randomFlat.cgColor
+                photoView.curve = "pop"
+                photoView.animation = "spring"
+                photoView.duration = 1.0
+                photoView.scaleY = 2
+                photoView.scaleX = 2
+                photoView.animate()
+            } else {
+                layer.borderColor = UIColor.clear.cgColor
+                layer.borderWidth = 0
+            }
+        }
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

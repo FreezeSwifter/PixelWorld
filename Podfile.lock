@@ -8,6 +8,7 @@ PODS:
   - CSStickyHeaderFlowLayout (0.2.11)
   - Differentiator (3.1.0)
   - Hero (1.4.0)
+  - JXSegmentedView (0.0.13)
   - ParallaxHeader (2.0.0)
   - PKHUD (5.2.0)
   - PryntTrimmerView (3.0.0)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - CSStickyHeaderFlowLayout
   - Hero (from `https://github.com/HeroTransitions/Hero.git`, branch `swift-4.2`)
+  - JXSegmentedView
   - ParallaxHeader (from `https://github.com/FreezeSwifter/ParallaxHeader.git`)
   - PKHUD (= 5.2.0)
   - ReactorKit
@@ -57,6 +59,7 @@ SPEC REPOS:
     - Action
     - CSStickyHeaderFlowLayout
     - Differentiator
+    - JXSegmentedView
     - PKHUD
     - PryntTrimmerView
     - ReactorKit
@@ -101,6 +104,7 @@ SPEC CHECKSUMS:
   CSStickyHeaderFlowLayout: e9bcb1762413f49d7d09e5bd0ae5efd1100116b7
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  JXSegmentedView: adb975e3af18ba9934e9fd3740e536173eb468ab
   ParallaxHeader: 06a25d4063ea007c03f0e4e3901827f665877c5f
   PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
   PryntTrimmerView: 53ac64053c7ce63cb3e27f54090f52da0734891d
@@ -116,6 +120,6 @@ SPEC CHECKSUMS:
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   YPImagePicker: 26d5bf7bfe1cffd1c5eedea3ac60422b314e2a42
 
-PODFILE CHECKSUM: 54fb9216b579bea02ef776e72dc4d73553eac0ad
+PODFILE CHECKSUM: f0a1d85cb0618eadf0f3003facfcd2753daeba27
 
 COCOAPODS: 1.5.3

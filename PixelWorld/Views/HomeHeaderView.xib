@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -118,23 +118,24 @@
                         <constraint firstItem="0T8-qY-q8R" firstAttribute="top" secondItem="AUm-c1-Pru" secondAttribute="top" id="ydH-JA-8oM"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pixel Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDQ-rX-m1R" customClass="SpringLabel" customModule="Spring">
-                    <rect key="frame" x="16" y="60" width="170" height="40"/>
-                    <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="40"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mec-ox-g2W" customClass="SpringButton" customModule="Spring">
+                    <rect key="frame" x="16" y="100" width="138" height="40"/>
+                    <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="28"/>
+                    <state key="normal" title="ABOUT US -&gt;">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="eDQ-rX-m1R" firstAttribute="top" secondItem="AUm-c1-Pru" secondAttribute="bottom" constant="26" id="4PR-Zn-ST8"/>
+                <constraint firstItem="mec-ox-g2W" firstAttribute="leading" secondItem="AUm-c1-Pru" secondAttribute="leading" id="6Nc-Gg-ZXf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Q2s-Vq-4Hq" secondAttribute="bottom" constant="10" id="JSr-rK-hZk"/>
                 <constraint firstItem="Q2s-Vq-4Hq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JTe-N0-D0D"/>
                 <constraint firstItem="AUm-c1-Pru" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="26" id="Mqo-1V-5bh"/>
-                <constraint firstItem="eDQ-rX-m1R" firstAttribute="leading" secondItem="AUm-c1-Pru" secondAttribute="leading" id="NAB-VM-ZIF"/>
                 <constraint firstItem="AUm-c1-Pru" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="XpZ-nV-cc7"/>
                 <constraint firstItem="Q2s-Vq-4Hq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jIg-RZ-isP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AUm-c1-Pru" secondAttribute="trailing" constant="80" id="k8S-Dy-X2i"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mec-ox-g2W" secondAttribute="bottom" constant="40" id="lmX-Tt-3NG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Q2s-Vq-4Hq" secondAttribute="trailing" constant="20" id="t9S-5r-CWB"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
@@ -142,8 +143,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="button" destination="mec-ox-g2W" id="XZn-7p-cZa"/>
                 <outlet property="imageView" destination="Q2s-Vq-4Hq" id="s1e-ct-gcj"/>
-                <outlet property="title" destination="eDQ-rX-m1R" id="d2i-L4-ml5"/>
             </connections>
             <point key="canvasLocation" x="-20" y="55.772113943028494"/>
         </view>

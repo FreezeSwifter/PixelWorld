@@ -25,7 +25,6 @@ class AboutViewController: UITableViewController {
         self.hero.isEnabled = true
         tableView.hero.id = "ironMan"
         tableView.hero.modifiers = [.fade, .scale(0.5)]
-        
         descriptionLabel.animate()
     }
     

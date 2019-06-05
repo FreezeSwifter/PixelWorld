@@ -2,21 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<true/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>像素世界需要访问照片</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>DisposableDroidBB_bld</string>
-		<string>DisposableDroidBB_bldital</string>
-		<string>DisposableDroidBB_ital</string>
-		<string>DisposableDroidBB</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>像素世界</string>
+	<string>贰○像素</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -33,6 +22,19 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>贰○像素需要访问照片</string>
+	<key>NSCameraUsageDescription</key>
+	<string>贰○像素需要访问相机</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>贰○像素需要访问照片</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DisposableDroidBB_bld</string>
+		<string>DisposableDroidBB_bldital</string>
+		<string>DisposableDroidBB_ital</string>
+		<string>DisposableDroidBB</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -44,8 +46,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -54,5 +54,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
 </dict>
 </plist>

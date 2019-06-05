@@ -13,13 +13,16 @@ import Spring
 import YPImagePicker
 import RealmSwift
 import ChameleonFramework
+import RxCocoa
+import RxSwift
+import Photos
+import PKHUD
 
 class ViewController: UIViewController {
     
     var notificationToken: NotificationToken? = nil
     
     @IBOutlet weak var photoCollectionView: UICollectionView!
-    let header: HomeHeaderView = ViewLoader.Xib.view()
     @IBOutlet weak var pickButton: SpringButton!
     @IBOutlet weak var editButton: SpringButton! {
         didSet {
@@ -35,8 +38,11 @@ class ViewController: UIViewController {
     lazy var layout = BouncyLayout(style: .regular)
     lazy var insets = UIEdgeInsets(top: 200, left: 0, bottom: 200, right: 0)
     lazy var additionalInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    lazy var isPushed = false
     lazy var dataSouce: [PhotoModel] = []
+    
+    var selectedModel: PhotoModel!
+    var selectedCell: HomePhotoCell!
+    
     
     var pickConfig: YPImagePickerConfiguration = {
         var config = YPImagePickerConfiguration()
@@ -66,9 +72,9 @@ class ViewController: UIViewController {
         return .default
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        isPushed = false
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideButtonsAnimation()
     }
     
     deinit {
@@ -94,6 +100,17 @@ class ViewController: UIViewController {
             btn?.curve = "linear"
             btn?.duration = 1.5
             btn?.animate()
+        }
+    }
+    
+    func hideButtonsAnimation() {
+        [shareButton, editButton].forEach{ btn in
+            btn?.animation = "morph"
+            btn?.curve = "linear"
+            btn?.duration = 1.5
+            btn?.animateNext(completion: {
+                btn?.isHidden = true
+            })
         }
     }
     
@@ -142,7 +159,41 @@ class ViewController: UIViewController {
             self.pickButton.animate()
         }
         
+        pickButton.set(image: UIImage(named: "pick_img_icon"), title: "Pick Image", titlePosition: .bottom, additionalSpacing: 10, state: .normal)
+        editButton.set(image: UIImage(named: "edit_icon"), title: "Edit Image", titlePosition: .bottom, additionalSpacing: 10, state: .normal)
+        shareButton.set(image: UIImage(named: "share_icon"), title: "Save Image", titlePosition: .bottom, additionalSpacing: 10, state: .normal)
+        
         pickButton.addTarget(self, action: #selector(pickAction(_:)), for: UIControl.Event.touchUpInside)
+        
+        editButton.rx.tap.subscribe(onNext: {[unowned self] (_) in
+            
+            let editVC: EditViewController = ViewLoader.Storyboard.controller(from: "Main")
+            editVC.photoModel = self.selectedModel
+            self.selectedCell.hero.id = "photoCool"
+            self.present(editVC, animated: true, completion: nil)
+            
+        }).disposed(by: rx.disposeBag)
+        
+        
+        shareButton.addTarget(self, action: #selector(shareTap), for: .touchUpInside)
+    }
+    
+    @objc func shareTap() {
+        self.showActionSheet(title: nil, message: "Do you want to save the picture to an album?", buttonTitles: ["Save", "Cancel"], highlightedButtonIndex: 1) {[weak self] (index) in
+            if index == 0 {
+                if let imageToBeSaved = self?.selectedCell.photoView.image {
+                    PHPhotoLibrary.shared().performChanges({
+                        PHAssetChangeRequest.creationRequestForAsset(from: imageToBeSaved)
+                    }, completionHandler: { success, error in
+                        if success {
+                            DispatchQueue.main.async {
+                                HUD.flash(.label("Save Successfully"), delay: 2)
+                            }
+                        }
+                    })
+                }
+            }
+        }
     }
     
     func setupCollectionView() {
@@ -158,36 +209,24 @@ class ViewController: UIViewController {
         photoCollectionView.register(UINib(nibName: "HomePhotoCell", bundle: nil), forCellWithReuseIdentifier: "HomePhotoCell")
         
         photoCollectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        photoCollectionView.scrollIndicatorInsets = UIEdgeInsets(top: insets.top, left: insets.left, bottom: insets.bottom, right: insets.right)
         
+        let header: HomeHeaderView = ViewLoader.Xib.view()
         photoCollectionView.parallaxHeader.view = header
         photoCollectionView.parallaxHeader.height = 180
-        photoCollectionView.parallaxHeader.minimumHeight = 64
-        photoCollectionView.parallaxHeader.mode = .centerFill
         
-        photoCollectionView.parallaxHeader.parallaxHeaderDidScrollHandler = {[unowned self] parallaxHeader in
-            
-            self.header.imageView.blurView.alpha = 1 - parallaxHeader.progress
-            
-            if (1 - parallaxHeader.progress) < 0.8 {
-                self.header.title.animateNext {
-                    self.header.title.animation = "shake"
-                    self.header.title.curve = "spring"
-                    self.header.title.animateTo()
-                }
-            }
-            
-            if Int(parallaxHeader.progress) == 2 {
-                
-                if !self.isPushed {
-                    
-                    let aboutVC: AboutViewController = ViewLoader.Storyboard.controller(from: "Main")
-                    self.isPushed = true
-                    self.present(aboutVC, animated: true, completion: nil)
-                    
-                }
-            }
-            
+        header.button.addTarget(self, action: #selector(gotoAboutUs(button:)), for: .touchUpInside)
+        
+    }
+    
+    @objc func gotoAboutUs(button: SpringButton) {
+        button.curve = "pop"
+        button.animation = "spring"
+        button.duration = 0.5
+        button.scaleY = 2
+        button.scaleX = 2
+        button.animateNext {[weak self] in
+            let aboutVC: AboutViewController = ViewLoader.Storyboard.controller(from: "Main")
+            self?.present(aboutVC, animated: true, completion: nil)
         }
     }
     
@@ -215,11 +254,7 @@ class ViewController: UIViewController {
     func setupPickerNavigationFont() {
         
         guard let customFont = UIFont(name: "DisposableDroidBB-Bold", size: 22) else {
-            fatalError("""
-        Failed to load the "DisposableDroidBB-Bold" font.
-        Make sure the font file is included in the project and the font name is spelled correctly.
-        """
-            )
+            fatalError()
         }
         if #available(iOS 11.0, *) {
             let f = UIFontMetrics.default.scaledFont(for: customFont)
@@ -232,45 +267,20 @@ class ViewController: UIViewController {
             UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal) //
         }
     }
-    
-    @IBAction func editTapAction(_ sender: SpringButton) {
-        // jump editVC
-    }
-    
-    
-    @IBAction func tapShareAction(_ sender: SpringButton) {
-        // jump shareVC
-    }
 }
 
 
 extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! HomePhotoCell
-        if cell.isSelected == true {
-            cell.layer.borderWidth = 8
-            cell.layer.borderColor = UIColor.randomFlat.cgColor
-            
-            cell.photoView.curve = "pop"
-            cell.photoView.animation = "spring"
-            cell.photoView.duration = 1.0
-            cell.photoView.scaleY = 2
-            cell.photoView.scaleX = 2
-            cell.photoView.animate()
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? HomePhotoCell {
+            selectedCell = cell
         }
         
         showButtonsAnimation()
-        
+        selectedModel = dataSouce[indexPath.item]
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! HomePhotoCell
-        if cell.isSelected == false {
-            cell.layer.borderColor = UIColor.clear.cgColor
-        }
-    }
-    
 }
 
 extension ViewController: UICollectionViewDataSource {

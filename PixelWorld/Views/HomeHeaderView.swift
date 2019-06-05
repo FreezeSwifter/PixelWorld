@@ -11,7 +11,8 @@ import Spring
 
 class HomeHeaderView: UIView {
 
-    @IBOutlet weak var title: SpringLabel!
+
+    @IBOutlet weak var button: SpringButton!
     @IBOutlet weak var imageView: UIImageView!
     
     override func awakeFromNib() {
@@ -26,6 +27,8 @@ class HomeHeaderView: UIView {
         imageView.image = UIImage(cgImage: result!)
         
         imageView.blurView.setup(style: UIBlurEffect.Style.dark, alpha: 1).enable()
+        
+        
     }
 
 }

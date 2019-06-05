@@ -122,7 +122,7 @@ public class Pixelate {
 }
 
 fileprivate extension UIColor {
-    fileprivate func multiply(alpha: CGFloat) -> UIColor {
+    func multiply(alpha: CGFloat) -> UIColor {
         var r: CGFloat = 0
         var g: CGFloat = 0
         var b: CGFloat = 0
@@ -131,7 +131,7 @@ fileprivate extension UIColor {
         return UIColor(red: r, green: g, blue: b, alpha: a * alpha)
     }
     
-    fileprivate static func at(image: CGImage, x: Int, y: Int) -> UIColor? {
+    static func at(image: CGImage, x: Int, y: Int) -> UIColor? {
         if let pixelData = image.dataProvider?.data {
             let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
             return UIColor.at(image: image, data: data, x: x, y: y)
@@ -141,7 +141,7 @@ fileprivate extension UIColor {
     }
     
     /// reuse array
-    fileprivate static func at(image: CGImage, data: UnsafePointer<UInt8>, x: Int, y: Int) -> UIColor {
+    static func at(image: CGImage, data: UnsafePointer<UInt8>, x: Int, y: Int) -> UIColor {
         let index = image.bytesPerRow * Int(y) + Int(x) * image.bitsPerPixel / 8
         let color: UIColor
         switch image.alphaInfo {

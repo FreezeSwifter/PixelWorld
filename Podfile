@@ -20,4 +20,10 @@ target 'PixelWorld' do
   pod 'Then'
   pod 'RxRealm'
   pod 'ReactorKit'
+  
+  pod 'JXSegmentedView'
+
+ # LeanCloud
+  pod 'AVOSCloud'
+  pod 'AVOSCloudLiveQuery'
 end
