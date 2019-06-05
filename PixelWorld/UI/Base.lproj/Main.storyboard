@@ -222,7 +222,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="34K-37-wvf">
-                                <rect key="frame" x="133" y="600" width="109" height="27"/>
+                                <rect key="frame" x="92" y="600" width="191" height="27"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJB-Ru-lET">
                                         <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
@@ -236,6 +236,13 @@
                                         <state key="normal" image="ok_button_icon"/>
                                         <connections>
                                             <action selector="saveTap:" destination="9eo-hq-i9m" eventType="touchUpInside" id="cEs-gN-5Mv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQv-FP-vXW">
+                                        <rect key="frame" x="164" y="0.0" width="27" height="27"/>
+                                        <state key="normal" image="delete_button_icon"/>
+                                        <connections>
+                                            <action selector="deleteTap:" destination="9eo-hq-i9m" eventType="touchUpInside" id="ues-gY-6GO"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -442,6 +449,7 @@
     </scenes>
     <resources>
         <image name="close_button_icon" width="27" height="27"/>
+        <image name="delete_button_icon" width="27" height="27"/>
         <image name="edit_icon" width="20" height="20"/>
         <image name="ok_button_icon" width="27" height="22"/>
         <image name="pick_img_icon" width="20" height="20"/>

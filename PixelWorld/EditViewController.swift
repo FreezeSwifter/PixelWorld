@@ -65,6 +65,22 @@ class EditViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func deleteTap(_ sender: UIButton) {
+        self.showActionSheet(title: nil, message: "You sure you want to delete it?", buttonTitles: ["Delete", "Cancel"], highlightedButtonIndex: 1) {[weak self] (index) in
+            guard let this = self else { return }
+            if index == 0 {
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.delete(this.photoModel)
+                }
+                
+                HUD.flash(.label("Deleting..."), delay: 1)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {[weak self] in
+                    self?.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+    }
     
     @IBAction func saveTap(_ sender: UIButton) {
         let realm = try! Realm()
