@@ -68,12 +68,29 @@ class ViewController: UIViewController {
         return config
     }()
     
+    
+    let privacyQuery = AVQuery(className: DatabaseKey.privacyTable)
+    var tiggerCount = BehaviorRelay<Int>(value: 0)
+    
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            tiggerCount.accept(tiggerCount.value + 1)
+        }
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tiggerCount.accept(0)
         hideButtonsAnimation()
     }
     
@@ -83,6 +100,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        becomeFirstResponder()
+        
+        changeEnvironment()
         
         setupPickerNavigationFont()
         setupCollectionView()
@@ -90,7 +110,17 @@ class ViewController: UIViewController {
         setupRealmObserver()
         figureoutPhotoData()
         photoCollectionView.hero.id = "ironMan"
+       
         
+        privacyQuery.findObjectsInBackground {[weak self] (object, _) in
+            
+            guard let privacy = object?.first as? AVObject, let isAlert = privacy.object(forKey: "isFristShow") as? Bool, let this = self else { return }
+            
+            if isAlert {
+                let privacyVC: PrivacyViewController = ViewLoader.Storyboard.controller(from: "Main")
+                this.present(privacyVC, animated: false, completion: nil)
+            }
+        }
     }
     
     func showButtonsAnimation() {
@@ -266,6 +296,34 @@ class ViewController: UIViewController {
             UINavigationBar.appearance().titleTextAttributes = attributes // Title fonts
             UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal) //
         }
+    }
+    
+    
+    private func changeEnvironment() {
+        tiggerCount.subscribe(onNext: {[weak self] (count) in
+            if count == 3 {
+                let alertVC = UIAlertController(title: "请输入管理员密码", message: nil, preferredStyle: .alert)
+                
+                alertVC.addTextField { (textField) in
+                    textField.placeholder = "请输入密码"
+                    textField.keyboardType = .default
+                }
+                
+                let confirmAction = UIAlertAction(title: "验证", style: .default) {[weak alertVC] (_) in
+                    guard let alertController = alertVC, let textField = alertController.textFields?.first else { return }
+                    
+                    if textField.text == ServerHelper.shared.adminPwd ?? "bbqqdd123" {
+                        let changeVC: ChangeEnvironmentController = ViewLoader.Storyboard.controller(from: "Main")
+                        self?.present(changeVC, animated: true, completion: nil)
+                    }
+                }
+                
+                let cancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                alertVC.addAction(confirmAction)
+                alertVC.addAction(cancel)
+                self?.present(alertVC, animated: true, completion: nil)
+            }
+        }).disposed(by: rx.disposeBag)
     }
 }
 

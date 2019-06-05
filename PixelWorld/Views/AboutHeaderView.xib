@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -92,6 +92,12 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pull down drop out ↓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDv-LD-NbA">
+                    <rect key="frame" x="210" y="143" width="155" height="17"/>
+                    <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.023529411760000001" green="0.10980392160000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
             <constraints>
@@ -103,6 +109,8 @@
                 <constraint firstItem="2LQ-iz-axQ" firstAttribute="top" secondItem="Hvl-SK-8OV" secondAttribute="bottom" constant="26" id="aX0-a3-n18"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="23I-Di-1QJ" secondAttribute="trailing" id="aql-dQ-t8N"/>
                 <constraint firstAttribute="bottom" secondItem="23I-Di-1QJ" secondAttribute="bottom" id="fcx-Ud-axE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aDv-LD-NbA" secondAttribute="bottom" constant="20" id="gxi-C1-dUS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aDv-LD-NbA" secondAttribute="trailing" constant="10" id="teb-gj-WQw"/>
                 <constraint firstItem="Hvl-SK-8OV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="25" id="zLD-WC-AMD"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>

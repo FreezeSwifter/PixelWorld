@@ -13,6 +13,12 @@
 		9C03A58822A7CA99002B65D6 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A58722A7CA99002B65D6 /* UIViewController+Ex.swift */; };
 		9C03A58A22A7D72B002B65D6 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A58922A7D72B002B65D6 /* DisplayViewController.swift */; };
 		9C03A58C22A7E228002B65D6 /* FilterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A58B22A7E228002B65D6 /* FilterHelper.swift */; };
+		9C03A59422A7F366002B65D6 /* ServerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59322A7F366002B65D6 /* ServerHelper.swift */; };
+		9C03A59622A7F3BE002B65D6 /* StaticConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59522A7F3BE002B65D6 /* StaticConst.swift */; };
+		9C03A59822A7F77A002B65D6 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59722A7F77A002B65D6 /* PrivacyViewController.swift */; };
+		9C03A59A22A7F8D1002B65D6 /* ChangeEnvironmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59922A7F8D1002B65D6 /* ChangeEnvironmentController.swift */; };
+		9C03A59C22A7F910002B65D6 /* ActionError+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59B22A7F910002B65D6 /* ActionError+Ex.swift */; };
+		9C03A59E22A7F926002B65D6 /* PKHud+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59D22A7F926002B65D6 /* PKHud+Rx.swift */; };
 		9C2F7EFE21707D4E00DB30E4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */; };
 		9C30040921787A7D00C15ADE /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C30040721787A7C00C15ADE /* NSObject+Rx.swift */; };
 		9C30040A21787A7D00C15ADE /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C30040821787A7D00C15ADE /* HasDisposeBag.swift */; };
@@ -53,6 +59,13 @@
 		9C03A58722A7CA99002B65D6 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
 		9C03A58922A7D72B002B65D6 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		9C03A58B22A7E228002B65D6 /* FilterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHelper.swift; sourceTree = "<group>"; };
+		9C03A58F22A7F25D002B65D6 /* PixelWorld-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PixelWorld-Bridging-Header.h"; sourceTree = "<group>"; };
+		9C03A59322A7F366002B65D6 /* ServerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerHelper.swift; sourceTree = "<group>"; };
+		9C03A59522A7F3BE002B65D6 /* StaticConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticConst.swift; sourceTree = "<group>"; };
+		9C03A59722A7F77A002B65D6 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		9C03A59922A7F8D1002B65D6 /* ChangeEnvironmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeEnvironmentController.swift; sourceTree = "<group>"; };
+		9C03A59B22A7F910002B65D6 /* ActionError+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionError+Ex.swift"; sourceTree = "<group>"; };
+		9C03A59D22A7F926002B65D6 /* PKHud+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PKHud+Rx.swift"; sourceTree = "<group>"; };
 		9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		9C30040721787A7C00C15ADE /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
 		9C30040821787A7D00C15ADE /* HasDisposeBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasDisposeBag.swift; sourceTree = "<group>"; };
@@ -156,7 +169,11 @@
 				9C3FC5DF216F47BD009FE9C1 /* PixelateLayer.swift */,
 				9C9E3E6A2174A2E300C204D5 /* PixelFilters.swift */,
 				9C03A58322A7AD4F002B65D6 /* UIButton+Ex.swift */,
+				9C03A59322A7F366002B65D6 /* ServerHelper.swift */,
+				9C03A59522A7F3BE002B65D6 /* StaticConst.swift */,
 				9C03A58722A7CA99002B65D6 /* UIViewController+Ex.swift */,
+				9C03A59D22A7F926002B65D6 /* PKHud+Rx.swift */,
+				9C03A59B22A7F910002B65D6 /* ActionError+Ex.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -205,10 +222,13 @@
 				9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */,
 				9C03A58522A7AFE2002B65D6 /* EditViewController.swift */,
 				9C03A58922A7D72B002B65D6 /* DisplayViewController.swift */,
+				9C03A59722A7F77A002B65D6 /* PrivacyViewController.swift */,
+				9C03A59922A7F8D1002B65D6 /* ChangeEnvironmentController.swift */,
 				9C3FC605216F6099009FE9C1 /* road-949832_1280.jpg */,
 				9C3FC5DB216F3FC1009FE9C1 /* lost-places-1549096_1280.jpg */,
 				9C91E88A216E11C400ABDFB8 /* Assets.xcassets */,
 				9C91E88F216E11C400ABDFB8 /* Info.plist */,
+				9C03A58F22A7F25D002B65D6 /* PixelWorld-Bridging-Header.h */,
 			);
 			path = PixelWorld;
 			sourceTree = "<group>";
@@ -274,6 +294,7 @@
 				TargetAttributes = {
 					9C91E87F216E11C200ABDFB8 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -343,6 +364,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AVOSCloud/AVOSCloud.framework",
+				"${BUILT_PRODUCTS_DIR}/AVOSCloudIM/AVOSCloudIM.framework",
+				"${BUILT_PRODUCTS_DIR}/AVOSCloudLiveQuery/AVOSCloudLiveQuery.framework",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
@@ -366,6 +390,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVOSCloud.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVOSCloudIM.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVOSCloudLiveQuery.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSStickyHeaderFlowLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
@@ -402,14 +429,20 @@
 				9CD6CFDA2179CD1900DEE2C0 /* TaskService.swift in Sources */,
 				9CF59FD52175B81700CC5AE6 /* HomeViewModel.swift in Sources */,
 				9C03A58C22A7E228002B65D6 /* FilterHelper.swift in Sources */,
+				9C03A59822A7F77A002B65D6 /* PrivacyViewController.swift in Sources */,
 				9C3FC5CA216F279B009FE9C1 /* UIAplication+RLT.swift in Sources */,
+				9C03A59622A7F3BE002B65D6 /* StaticConst.swift in Sources */,
 				9C3FC5D9216F3849009FE9C1 /* HomePhotoCell.swift in Sources */,
 				9C3FC5DE216F478C009FE9C1 /* Pixelate.swift in Sources */,
 				9C3FC5D1216F331A009FE9C1 /* HomeHeaderView.swift in Sources */,
+				9C03A59C22A7F910002B65D6 /* ActionError+Ex.swift in Sources */,
+				9C03A59A22A7F8D1002B65D6 /* ChangeEnvironmentController.swift in Sources */,
 				9C9E3E67217445A700C204D5 /* PhotoModel.swift in Sources */,
+				9C03A59422A7F366002B65D6 /* ServerHelper.swift in Sources */,
 				9C9E3E6921747E3F00C204D5 /* HomePhotoCellProtocol.swift in Sources */,
 				9C3FC600216F5AB4009FE9C1 /* AboutHeaderView.swift in Sources */,
 				9C30040A21787A7D00C15ADE /* HasDisposeBag.swift in Sources */,
+				9C03A59E22A7F926002B65D6 /* PKHud+Rx.swift in Sources */,
 				9C3FC5E2216F491E009FE9C1 /* UIImage+Extensions.swift in Sources */,
 				9C9E3E6B2174A2E300C204D5 /* PixelFilters.swift in Sources */,
 				9C3FC5C9216F279B009FE9C1 /* UIView+Blur.swift in Sources */,
@@ -570,6 +603,7 @@
 			baseConfigurationReference = EA0C065142B803F18773327E /* Pods-PixelWorld.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YX5743TCEJ;
 				INFOPLIST_FILE = PixelWorld/Info.plist;
@@ -580,6 +614,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.PixelWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PixelWorld/PixelWorld-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -590,6 +626,7 @@
 			baseConfigurationReference = ED3CF5A836BDC13F54AC2282 /* Pods-PixelWorld.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YX5743TCEJ;
 				INFOPLIST_FILE = PixelWorld/Info.plist;
@@ -600,6 +637,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.PixelWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PixelWorld/PixelWorld-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
