@@ -54,11 +54,13 @@ class ViewController: UIViewController {
         config.showsFilters = false
         config.shouldSaveNewPicturesToAlbum = true
         
-        config.albumName = "PixelWord"
+        config.albumName = "贰○像素"
         config.screens = [.library, .photo]
         config.startOnScreen = .library
         config.showsCrop = .none
-        config.wordings.libraryTitle = "PixelWord"
+        config.wordings.libraryTitle = "Photo Library"
+        config.wordings.cameraTitle = "Camera"
+        config.wordings.next = "Confirm"
         config.hidesStatusBar = false
         config.library.maxNumberOfItems = 1
         config.library.minNumberOfItems = 1
@@ -217,7 +219,7 @@ class ViewController: UIViewController {
                     }, completionHandler: { success, error in
                         if success {
                             DispatchQueue.main.async {
-                                HUD.flash(.label("Save Successfully"), delay: 2)
+                                HUD.flash(.label("Saved In The Album Successfully"), delay: 2)
                             }
                         }
                     })

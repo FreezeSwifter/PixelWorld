@@ -40,7 +40,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gcc-7d-3HM">
-                                                    <rect key="frame" x="16" y="26" width="153" height="108"/>
+                                                    <rect key="frame" x="16" y="26" width="162" height="108"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G51-XU-uCS" customClass="SpringLabel" customModule="Spring">
                                                             <rect key="frame" x="0.0" y="0.0" width="29" height="36"/>
@@ -54,8 +54,8 @@
                                                             <color key="textColor" red="0.023529411760000001" green="0.10980392160000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pixel Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIS-x8-9vE" customClass="SpringLabel" customModule="Spring">
-                                                            <rect key="frame" x="0.0" y="72" width="153" height="36"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two O Pixel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIS-x8-9vE" customClass="SpringLabel" customModule="Spring">
+                                                            <rect key="frame" x="0.0" y="72" width="162" height="36"/>
                                                             <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="36"/>
                                                             <color key="textColor" red="0.023529411760000001" green="0.10980392160000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -138,7 +138,7 @@
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6v-cr-vQJ" customClass="SpringLabel" customModule="Spring">
                                                     <rect key="frame" x="16" y="80" width="343" height="156"/>
-                                                    <string key="text">The film names are all trademarks and copyrights property of their respective owners. None of the film producers endorse or sponsor PIXEL WORLD.</string>
+                                                    <string key="text">The film names are all trademarks and copyrights property of their respective owners. None of the film producers endorse or sponsor Two O PIXEL.</string>
                                                     <fontDescription key="fontDescription" name="DisposableDroidBB-Italic" family="DisposableDroid BB" pointSize="26"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -255,7 +255,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.16078370810000001" green="0.16078054899999999" blue="0.1607845426" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="a0m-6p-iY3" firstAttribute="top" secondItem="OYP-C9-WA3" secondAttribute="top" constant="40" id="KVz-ye-P8Y"/>
                             <constraint firstItem="34K-37-wvf" firstAttribute="centerX" secondItem="OYP-C9-WA3" secondAttribute="centerX" id="YG1-cO-G33"/>

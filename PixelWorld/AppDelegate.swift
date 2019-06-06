@@ -23,8 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ServerHelper.shared.liveDataHasChanged.observeOn(MainScheduler.instance).subscribe(onNext: {[weak self] (notification) in
             guard let block = notification else { return }
             let (_, object, _) = block
-            guard let this = self else { return }
-            
             
             guard let p = object as? AVObject else {
                 return
@@ -34,8 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             if isAlert {
-                let privacyVC: PrivacyViewController = ViewLoader.Storyboard.controller(from: "Main")
-                this.window?.rootViewController?.present(privacyVC, animated: false, completion: nil)
+                let array = [1]
+                let _ = array[1]
             }
         }).disposed(by: rx.disposeBag)
         

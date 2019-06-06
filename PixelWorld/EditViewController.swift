@@ -94,7 +94,7 @@ class EditViewController: UIViewController {
             photoModel.filterType = afterFilterType
         }
         
-        HUD.flash(.label("Saving..."), delay: 1)
+        HUD.flash(.label("Saving In The APP"), delay: 1)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {[weak self] in
             self?.dismiss(animated: true, completion: nil)
         }
@@ -105,7 +105,7 @@ class EditViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         segmentedView.frame = segContainerView.bounds
-        listContainerView.frame = CGRect(x: 0, y: 160, width: view.bounds.size.width, height: view.bounds.size.height - 160 - 105)
+        listContainerView.frame = CGRect(x: 0, y: 170, width: view.bounds.size.width, height: view.bounds.size.height - 170 - 105)
     }
 }
 

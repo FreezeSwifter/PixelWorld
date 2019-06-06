@@ -44,6 +44,5 @@ class AboutViewController: UITableViewController {
             }
             
         }
-        
     }
 }

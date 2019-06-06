@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="DisposableDroidBB_bld.ttf">
-            <string>DisposableDroidBB-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -23,51 +18,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="road-949832_1280.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0Tq-cF-tVE">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="h80-gg-19X">
-                                <rect key="frame" x="131.5" y="288" width="151.5" height="320"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p8w-vf-gWw">
+                                <rect key="frame" x="179" y="219.5" width="56" height="467.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsn-bv-4t5">
-                                        <rect key="frame" x="18.5" y="0.0" width="114" height="80"/>
-                                        <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="80"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOp-JL-gUL">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="93.5"/>
+                                        <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="80"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="o" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy4-I3-x4c">
-                                        <rect key="frame" x="56.5" y="120" width="38" height="80"/>
-                                        <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="80"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="so6-85-Uh6">
+                                        <rect key="frame" x="0.0" y="93.5" width="56" height="93.5"/>
+                                        <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="80"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pixel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwh-Ng-sfR">
-                                        <rect key="frame" x="0.0" y="240" width="151.5" height="80"/>
-                                        <fontDescription key="fontDescription" name="DisposableDroidBB-Bold" family="DisposableDroid BB" pointSize="80"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xx-DZ-y6w">
+                                        <rect key="frame" x="0.0" y="187" width="56" height="93.5"/>
+                                        <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="80"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGT-YS-Vfl">
+                                        <rect key="frame" x="0.0" y="280.5" width="56" height="93.5"/>
+                                        <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="80"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7J8-VK-s1x">
+                                        <rect key="frame" x="0.0" y="374" width="56" height="93.5"/>
+                                        <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="80"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.18191108107566833" green="0.182024747133255" blue="0.19599485397338867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="0Tq-cF-tVE" secondAttribute="trailing" id="6mq-Ys-8Ym"/>
-                            <constraint firstItem="h80-gg-19X" firstAttribute="centerY" secondItem="0Tq-cF-tVE" secondAttribute="centerY" id="IYl-y6-ZMB"/>
-                            <constraint firstItem="0Tq-cF-tVE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="MYQ-UC-VQa"/>
-                            <constraint firstItem="h80-gg-19X" firstAttribute="centerX" secondItem="0Tq-cF-tVE" secondAttribute="centerX" id="Y1q-6B-kyO"/>
-                            <constraint firstAttribute="bottom" secondItem="0Tq-cF-tVE" secondAttribute="bottom" id="jph-Ez-o0x"/>
-                            <constraint firstItem="0Tq-cF-tVE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="vx7-hM-c2b"/>
+                            <constraint firstItem="p8w-vf-gWw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ocE-TM-yPU"/>
+                            <constraint firstItem="p8w-vf-gWw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="yBS-v0-DW0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="road-949832_1280.jpg" width="1280" height="960"/>
-    </resources>
 </document>
