@@ -41,7 +41,7 @@ class EditViewController: UIViewController {
         segContainerView.addSubview(segmentedView)
         segmentedView.delegate = self
         
-        segmentedDataSource.titles = ["Buffing", "Liquidation", "Rhombus", "Fissured", "Oil", "Telescopic", "Electronization", "Gasify", "Wood"]
+        segmentedDataSource.titles = ["Buffing", "Liquidation", "Rhombus", "Fissured", "Oil", "Telescopic", "Electronization", "Gasify", "Wood", "Hard Mix"]
         segmentedDataSource.titleNormalColor = UIColor.white
         segmentedDataSource.titleSelectedColor = UIColor.white
         if let customFont =  UIFont(name: "DisposableDroidBB-Bold", size: 28) {

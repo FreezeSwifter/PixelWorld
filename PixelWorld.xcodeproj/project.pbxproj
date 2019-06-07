@@ -13,10 +13,7 @@
 		9C03A58822A7CA99002B65D6 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A58722A7CA99002B65D6 /* UIViewController+Ex.swift */; };
 		9C03A58A22A7D72B002B65D6 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A58922A7D72B002B65D6 /* DisplayViewController.swift */; };
 		9C03A58C22A7E228002B65D6 /* FilterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A58B22A7E228002B65D6 /* FilterHelper.swift */; };
-		9C03A59422A7F366002B65D6 /* ServerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59322A7F366002B65D6 /* ServerHelper.swift */; };
 		9C03A59622A7F3BE002B65D6 /* StaticConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59522A7F3BE002B65D6 /* StaticConst.swift */; };
-		9C03A59822A7F77A002B65D6 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59722A7F77A002B65D6 /* PrivacyViewController.swift */; };
-		9C03A59A22A7F8D1002B65D6 /* ChangeEnvironmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59922A7F8D1002B65D6 /* ChangeEnvironmentController.swift */; };
 		9C03A59C22A7F910002B65D6 /* ActionError+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59B22A7F910002B65D6 /* ActionError+Ex.swift */; };
 		9C03A59E22A7F926002B65D6 /* PKHud+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03A59D22A7F926002B65D6 /* PKHud+Rx.swift */; };
 		9C2F7EFE21707D4E00DB30E4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */; };
@@ -30,7 +27,6 @@
 		9C3FC5D6216F3745009FE9C1 /* BouncyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5D5216F3745009FE9C1 /* BouncyLayout.swift */; };
 		9C3FC5D9216F3849009FE9C1 /* HomePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5D7216F3849009FE9C1 /* HomePhotoCell.swift */; };
 		9C3FC5DA216F3849009FE9C1 /* HomePhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC5D8216F3849009FE9C1 /* HomePhotoCell.xib */; };
-		9C3FC5DC216F3FC1009FE9C1 /* lost-places-1549096_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC5DB216F3FC1009FE9C1 /* lost-places-1549096_1280.jpg */; };
 		9C3FC5DE216F478C009FE9C1 /* Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5DD216F478C009FE9C1 /* Pixelate.swift */; };
 		9C3FC5E0216F47BD009FE9C1 /* PixelateLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5DF216F47BD009FE9C1 /* PixelateLayer.swift */; };
 		9C3FC5E2216F491E009FE9C1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5E1216F491E009FE9C1 /* UIImage+Extensions.swift */; };
@@ -40,7 +36,6 @@
 		9C3FC5FC216F541B009FE9C1 /* DisposableDroidBB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC5F8216F541B009FE9C1 /* DisposableDroidBB.ttf */; };
 		9C3FC600216F5AB4009FE9C1 /* AboutHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FC5FF216F5AB4009FE9C1 /* AboutHeaderView.swift */; };
 		9C3FC602216F5ABB009FE9C1 /* AboutHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC601216F5ABB009FE9C1 /* AboutHeaderView.xib */; };
-		9C3FC606216F6099009FE9C1 /* road-949832_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FC605216F6099009FE9C1 /* road-949832_1280.jpg */; };
 		9C91E884216E11C200ABDFB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91E883216E11C200ABDFB8 /* AppDelegate.swift */; };
 		9C91E886216E11C200ABDFB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91E885216E11C200ABDFB8 /* ViewController.swift */; };
 		9C91E889216E11C200ABDFB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C91E887216E11C200ABDFB8 /* Main.storyboard */; };
@@ -51,6 +46,8 @@
 		9C9E3E6B2174A2E300C204D5 /* PixelFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E3E6A2174A2E300C204D5 /* PixelFilters.swift */; };
 		9CD6CFDA2179CD1900DEE2C0 /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6CFD92179CD1900DEE2C0 /* TaskService.swift */; };
 		9CF59FD52175B81700CC5AE6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF59FD42175B81700CC5AE6 /* HomeViewModel.swift */; };
+		9CF602EA22AAA4D400462425 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF602E922AAA4D400462425 /* UIViewController+Navigation.swift */; };
+		9CF602EC22AAA54B00462425 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF602EB22AAA54B00462425 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,10 +57,7 @@
 		9C03A58922A7D72B002B65D6 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		9C03A58B22A7E228002B65D6 /* FilterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHelper.swift; sourceTree = "<group>"; };
 		9C03A58F22A7F25D002B65D6 /* PixelWorld-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PixelWorld-Bridging-Header.h"; sourceTree = "<group>"; };
-		9C03A59322A7F366002B65D6 /* ServerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerHelper.swift; sourceTree = "<group>"; };
 		9C03A59522A7F3BE002B65D6 /* StaticConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticConst.swift; sourceTree = "<group>"; };
-		9C03A59722A7F77A002B65D6 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
-		9C03A59922A7F8D1002B65D6 /* ChangeEnvironmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeEnvironmentController.swift; sourceTree = "<group>"; };
 		9C03A59B22A7F910002B65D6 /* ActionError+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionError+Ex.swift"; sourceTree = "<group>"; };
 		9C03A59D22A7F926002B65D6 /* PKHud+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PKHud+Rx.swift"; sourceTree = "<group>"; };
 		9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +71,6 @@
 		9C3FC5D5216F3745009FE9C1 /* BouncyLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncyLayout.swift; sourceTree = "<group>"; };
 		9C3FC5D7216F3849009FE9C1 /* HomePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoCell.swift; sourceTree = "<group>"; };
 		9C3FC5D8216F3849009FE9C1 /* HomePhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePhotoCell.xib; sourceTree = "<group>"; };
-		9C3FC5DB216F3FC1009FE9C1 /* lost-places-1549096_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lost-places-1549096_1280.jpg"; sourceTree = "<group>"; };
 		9C3FC5DD216F478C009FE9C1 /* Pixelate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixelate.swift; sourceTree = "<group>"; };
 		9C3FC5DF216F47BD009FE9C1 /* PixelateLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelateLayer.swift; sourceTree = "<group>"; };
 		9C3FC5E1216F491E009FE9C1 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -87,7 +80,6 @@
 		9C3FC5F8216F541B009FE9C1 /* DisposableDroidBB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DisposableDroidBB.ttf; sourceTree = "<group>"; };
 		9C3FC5FF216F5AB4009FE9C1 /* AboutHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHeaderView.swift; sourceTree = "<group>"; };
 		9C3FC601216F5ABB009FE9C1 /* AboutHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutHeaderView.xib; sourceTree = "<group>"; };
-		9C3FC605216F6099009FE9C1 /* road-949832_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "road-949832_1280.jpg"; sourceTree = "<group>"; };
 		9C91E880216E11C200ABDFB8 /* PixelWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C91E883216E11C200ABDFB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C91E885216E11C200ABDFB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +92,8 @@
 		9C9E3E6A2174A2E300C204D5 /* PixelFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelFilters.swift; sourceTree = "<group>"; };
 		9CD6CFD92179CD1900DEE2C0 /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		9CF59FD42175B81700CC5AE6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9CF602E922AAA4D400462425 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		9CF602EB22AAA54B00462425 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		BB8E0648DB3A2CEB3762E1C2 /* Pods_PixelWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixelWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0C065142B803F18773327E /* Pods-PixelWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld.debug.xcconfig"; sourceTree = "<group>"; };
 		ED3CF5A836BDC13F54AC2282 /* Pods-PixelWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,11 +163,11 @@
 				9C3FC5DF216F47BD009FE9C1 /* PixelateLayer.swift */,
 				9C9E3E6A2174A2E300C204D5 /* PixelFilters.swift */,
 				9C03A58322A7AD4F002B65D6 /* UIButton+Ex.swift */,
-				9C03A59322A7F366002B65D6 /* ServerHelper.swift */,
 				9C03A59522A7F3BE002B65D6 /* StaticConst.swift */,
 				9C03A58722A7CA99002B65D6 /* UIViewController+Ex.swift */,
 				9C03A59D22A7F926002B65D6 /* PKHud+Rx.swift */,
 				9C03A59B22A7F910002B65D6 /* ActionError+Ex.swift */,
+				9CF602E922AAA4D400462425 /* UIViewController+Navigation.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -222,10 +216,7 @@
 				9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */,
 				9C03A58522A7AFE2002B65D6 /* EditViewController.swift */,
 				9C03A58922A7D72B002B65D6 /* DisplayViewController.swift */,
-				9C03A59722A7F77A002B65D6 /* PrivacyViewController.swift */,
-				9C03A59922A7F8D1002B65D6 /* ChangeEnvironmentController.swift */,
-				9C3FC605216F6099009FE9C1 /* road-949832_1280.jpg */,
-				9C3FC5DB216F3FC1009FE9C1 /* lost-places-1549096_1280.jpg */,
+				9CF602EB22AAA54B00462425 /* BaseNavigationController.swift */,
 				9C91E88A216E11C400ABDFB8 /* Assets.xcassets */,
 				9C91E88F216E11C400ABDFB8 /* Info.plist */,
 				9C03A58F22A7F25D002B65D6 /* PixelWorld-Bridging-Header.h */,
@@ -330,9 +321,7 @@
 				9C3FC5DA216F3849009FE9C1 /* HomePhotoCell.xib in Resources */,
 				9C91E88B216E11C400ABDFB8 /* Assets.xcassets in Resources */,
 				9C91E889216E11C200ABDFB8 /* Main.storyboard in Resources */,
-				9C3FC5DC216F3FC1009FE9C1 /* lost-places-1549096_1280.jpg in Resources */,
 				9C3FC5FB216F541B009FE9C1 /* DisposableDroidBB_bldital.ttf in Resources */,
-				9C3FC606216F6099009FE9C1 /* road-949832_1280.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +360,7 @@
 				"${BUILT_PRODUCTS_DIR}/CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/FlexibleImage/FlexibleImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/JXSegmentedView/JXSegmentedView.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
@@ -397,6 +387,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSStickyHeaderFlowLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexibleImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXSegmentedView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
@@ -429,16 +420,14 @@
 				9CD6CFDA2179CD1900DEE2C0 /* TaskService.swift in Sources */,
 				9CF59FD52175B81700CC5AE6 /* HomeViewModel.swift in Sources */,
 				9C03A58C22A7E228002B65D6 /* FilterHelper.swift in Sources */,
-				9C03A59822A7F77A002B65D6 /* PrivacyViewController.swift in Sources */,
 				9C3FC5CA216F279B009FE9C1 /* UIAplication+RLT.swift in Sources */,
 				9C03A59622A7F3BE002B65D6 /* StaticConst.swift in Sources */,
 				9C3FC5D9216F3849009FE9C1 /* HomePhotoCell.swift in Sources */,
+				9CF602EA22AAA4D400462425 /* UIViewController+Navigation.swift in Sources */,
 				9C3FC5DE216F478C009FE9C1 /* Pixelate.swift in Sources */,
 				9C3FC5D1216F331A009FE9C1 /* HomeHeaderView.swift in Sources */,
 				9C03A59C22A7F910002B65D6 /* ActionError+Ex.swift in Sources */,
-				9C03A59A22A7F8D1002B65D6 /* ChangeEnvironmentController.swift in Sources */,
 				9C9E3E67217445A700C204D5 /* PhotoModel.swift in Sources */,
-				9C03A59422A7F366002B65D6 /* ServerHelper.swift in Sources */,
 				9C9E3E6921747E3F00C204D5 /* HomePhotoCellProtocol.swift in Sources */,
 				9C3FC600216F5AB4009FE9C1 /* AboutHeaderView.swift in Sources */,
 				9C30040A21787A7D00C15ADE /* HasDisposeBag.swift in Sources */,
@@ -454,6 +443,7 @@
 				9C2F7EFE21707D4E00DB30E4 /* AboutViewController.swift in Sources */,
 				9C03A58A22A7D72B002B65D6 /* DisplayViewController.swift in Sources */,
 				9C3FC5E0216F47BD009FE9C1 /* PixelateLayer.swift in Sources */,
+				9CF602EC22AAA54B00462425 /* BaseNavigationController.swift in Sources */,
 				9C03A58822A7CA99002B65D6 /* UIViewController+Ex.swift in Sources */,
 				9C03A58622A7AFE2002B65D6 /* EditViewController.swift in Sources */,
 				9C30040921787A7D00C15ADE /* NSObject+Rx.swift in Sources */,

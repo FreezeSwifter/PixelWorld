@@ -9,33 +9,27 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import Realm
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-     
-        let _ = ServerHelper.shared
         
-        ServerHelper.shared.liveDataHasChanged.observeOn(MainScheduler.instance).subscribe(onNext: {[weak self] (notification) in
-            guard let block = notification else { return }
-            let (_, object, _) = block
-            
-            guard let p = object as? AVObject else {
-                return
+        let realm = try! Realm()
+        let photos = realm.objects(PhotoModel.self)
+        if Array(photos.sorted(byKeyPath: "createdTime")).count == 0 {
+            let p = PhotoModel()
+            p.filterName = "Example Photo"
+            p.value = UIImage(named: "example_photo")?.compressedData(quality: 0.9)
+            try! realm.write {
+                realm.add(p)
             }
-            guard let isAlert = p.object(forKey: "isFristShow") as? Bool else {
-                return
-            }
-            
-            if isAlert {
-                let array = [1]
-                let _ = array[1]
-            }
-        }).disposed(by: rx.disposeBag)
+        }
         
         return true
     }

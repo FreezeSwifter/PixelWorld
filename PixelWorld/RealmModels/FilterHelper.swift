@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import FlexibleImage
 
 enum FilterHelper: Int, CustomStringConvertible {
     
@@ -21,6 +21,7 @@ enum FilterHelper: Int, CustomStringConvertible {
     case electronization
     case gasify
     case wood
+    case mix
     
     var description: String {
         switch self {
@@ -42,6 +43,8 @@ enum FilterHelper: Int, CustomStringConvertible {
             return "Gasify"
         case .wood:
             return "Wood"
+        case .mix:
+            return "Hard Mix"
         }
     }
     
@@ -116,6 +119,43 @@ enum FilterHelper: Int, CustomStringConvertible {
                                        PixelateLayer(.diamond, resolution: 12, size: 8, offset: 6))
             
             return UIImage(cgImage: temp!)
+            
+        case .mix:
+            let image1 = UIImage
+                .circle(
+                    color: UIColor.blue,
+                    size: CGSize(width: 100, height: 100)
+                )!.adjust()
+                .offset(CGPoint(x: 25, y: 0))
+                .margin(EdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
+                .padding(EdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
+                .normal(color: UIColor.white)
+                .border(color: UIColor.red, lineWidth: 5, radius: 50)
+                .image()!
+                
+                .adjust()
+                .background(color: UIColor.darkGray)
+                .image()
+            
+            let image2 = image
+                .adjust()
+                .outputSize(CGSize(width: 250, height: 250))
+                .exclusion(color: UIColor(red: 0, green: 0, blue: 0.352941176, alpha: 1.0))
+                .linearDodge(color: UIColor(red: 0.125490196, green: 0.058823529, blue: 0.192156863, alpha: 1.0))
+                .hardMix(color: UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1.0))
+                .image()
+            
+            guard let image3 = image2!.adjust()
+                .append(
+                    image1!.adjust()
+                        .outputSize(CGSize(width: 250, height: 250))
+                        .opacity(0.5)
+                )
+                .image() else { return UIImage() }
+            
+            
+            return image3
+            
         }
     }
 }

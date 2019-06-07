@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>贰○像素</string>
+	<string>像素世界</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -28,11 +28,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>贰○像素需要访问相机</string>
+	<string>像素世界需要使用相机来拍摄图片加以处理成像素风格</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>贰○像素需要访问照片</string>
+	<string>像素世界需要使用照片来加以处理成像素风格</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>贰○像素需要访问照片</string>
+	<string>像素世界需要使用照片来加以处理成像素风格</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>DisposableDroidBB_bld</string>

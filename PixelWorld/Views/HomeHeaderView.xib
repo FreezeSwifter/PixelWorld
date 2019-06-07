@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q2s-Vq-4Hq">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lost-places-1549096_1280" translatesAutoresizingMaskIntoConstraints="NO" id="Q2s-Vq-4Hq">
                     <rect key="frame" x="0.0" y="0.0" width="355" height="170"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUm-c1-Pru">
@@ -149,4 +149,7 @@
             <point key="canvasLocation" x="-20" y="55.772113943028494"/>
         </view>
     </objects>
+    <resources>
+        <image name="lost-places-1549096_1280" width="320" height="213.5"/>
+    </resources>
 </document>

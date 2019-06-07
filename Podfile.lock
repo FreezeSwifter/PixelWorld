@@ -20,6 +20,7 @@ PODS:
     - ChameleonFramework/Default
   - CSStickyHeaderFlowLayout (0.2.11)
   - Differentiator (3.1.0)
+  - FlexibleImage (1.10)
   - Hero (1.4.0)
   - JXSegmentedView (0.0.13)
   - ParallaxHeader (2.0.0)
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - AVOSCloudLiveQuery
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - CSStickyHeaderFlowLayout
+  - FlexibleImage
   - Hero (from `https://github.com/HeroTransitions/Hero.git`, branch `swift-4.2`)
   - JXSegmentedView
   - ParallaxHeader (from `https://github.com/FreezeSwifter/ParallaxHeader.git`)
@@ -77,6 +79,7 @@ SPEC REPOS:
     - AVOSCloudLiveQuery
     - CSStickyHeaderFlowLayout
     - Differentiator
+    - FlexibleImage
     - JXSegmentedView
     - PKHUD
     - PryntTrimmerView
@@ -124,6 +127,7 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CSStickyHeaderFlowLayout: e9bcb1762413f49d7d09e5bd0ae5efd1100116b7
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  FlexibleImage: 22bf26c42f1b6299b94bc5001e6ec310c94e6786
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   JXSegmentedView: adb975e3af18ba9934e9fd3740e536173eb468ab
   ParallaxHeader: 06a25d4063ea007c03f0e4e3901827f665877c5f
@@ -141,6 +145,6 @@ SPEC CHECKSUMS:
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   YPImagePicker: 26d5bf7bfe1cffd1c5eedea3ac60422b314e2a42
 
-PODFILE CHECKSUM: 492f76d130214943196d2287d51bdd669db86b37
+PODFILE CHECKSUM: e5aba69a3acb93f7e97f3e67dfa284e07d0c4856
 
 COCOAPODS: 1.5.3

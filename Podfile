@@ -23,6 +23,8 @@ target 'PixelWorld' do
   
   pod 'JXSegmentedView'
 
+  pod 'FlexibleImage'
+  
  # LeanCloud
   pod 'AVOSCloud'
   pod 'AVOSCloudLiveQuery'
