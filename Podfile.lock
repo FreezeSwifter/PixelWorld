@@ -2,19 +2,6 @@ PODS:
   - Action (3.8.0):
     - RxCocoa (~> 4.3.0)
     - RxSwift (~> 4.3.0)
-  - AVOSCloud (11.6.3)
-  - AVOSCloudIM (11.6.3):
-    - AVOSCloud (= 11.6.3)
-    - AVOSCloudIM/_ARC (= 11.6.3)
-    - AVOSCloudIM/_NOARC (= 11.6.3)
-  - AVOSCloudIM/_ARC (11.6.3):
-    - AVOSCloud (= 11.6.3)
-    - AVOSCloudIM/_NOARC (= 11.6.3)
-  - AVOSCloudIM/_NOARC (11.6.3):
-    - AVOSCloud (= 11.6.3)
-  - AVOSCloudLiveQuery (11.6.3):
-    - AVOSCloud (= 11.6.3)
-    - AVOSCloudIM (= 11.6.3)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
@@ -52,8 +39,6 @@ PODS:
 
 DEPENDENCIES:
   - Action
-  - AVOSCloud
-  - AVOSCloudLiveQuery
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - CSStickyHeaderFlowLayout
   - FlexibleImage
@@ -74,9 +59,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Action
-    - AVOSCloud
-    - AVOSCloudIM
-    - AVOSCloudLiveQuery
     - CSStickyHeaderFlowLayout
     - Differentiator
     - FlexibleImage
@@ -121,9 +103,6 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Action: 2275d04a407ecaf46a58d58a304388a28155a0a1
-  AVOSCloud: 3148cbb1d05be4e479cffa206f147ef09a470fdf
-  AVOSCloudIM: 415ec613caa269f71aecc1439f0b27aec9174ec2
-  AVOSCloudLiveQuery: 43da88e8f30a38401e625a83cb4f7cf35fa97186
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CSStickyHeaderFlowLayout: e9bcb1762413f49d7d09e5bd0ae5efd1100116b7
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
@@ -145,6 +124,6 @@ SPEC CHECKSUMS:
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   YPImagePicker: 26d5bf7bfe1cffd1c5eedea3ac60422b314e2a42
 
-PODFILE CHECKSUM: e5aba69a3acb93f7e97f3e67dfa284e07d0c4856
+PODFILE CHECKSUM: a5ff061d6d3d64b3d1a7c03b13452973b60d0c22
 
 COCOAPODS: 1.5.3

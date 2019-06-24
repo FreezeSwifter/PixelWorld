@@ -25,7 +25,4 @@ target 'PixelWorld' do
 
   pod 'FlexibleImage'
   
- # LeanCloud
-  pod 'AVOSCloud'
-  pod 'AVOSCloudLiveQuery'
 end
