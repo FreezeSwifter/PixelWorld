@@ -592,7 +592,10 @@
 				DEVELOPMENT_TEAM = YX5743TCEJ;
 				INFOPLIST_FILE = PixelWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.twopixel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PixelWorld/PixelWorld-Bridging-Header.h";
@@ -612,7 +615,10 @@
 				DEVELOPMENT_TEAM = YX5743TCEJ;
 				INFOPLIST_FILE = PixelWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.twopixel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PixelWorld/PixelWorld-Bridging-Header.h";

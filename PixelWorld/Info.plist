@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>像素世界</string>
+	<string>像素调色板</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -28,11 +28,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>像素世界需要使用相机来拍摄图片加以处理成像素风格</string>
+	<string>像素调色板需要使用相机来拍摄图片加以处理成像素风格</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>像素世界需要使用照片来加以处理成像素风格</string>
+	<string>像素调色板需要使用照片来加以处理成像素风格</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>像素世界需要使用照片来加以处理成像素风格</string>
+	<string>像素调色板需要使用照片来加以处理成像素风格</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>DisposableDroidBB_bld</string>
