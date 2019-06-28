@@ -96,6 +96,7 @@ extension AppDelegate {
             switch f {
             case "N", "n":
                 PWStorage.save(key: "first", value: false)
+                NotificationCenter.default.post(name: .refreshState, object: false)
             case "Y", "y":
                  NotificationCenter.default.post(name: .refreshState, object: true)
                 PWStorage.save(key: "first", value: true)
