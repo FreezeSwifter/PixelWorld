@@ -11,6 +11,7 @@ import RxCocoa
 import RxSwift
 import Realm
 import RealmSwift
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        createExamplePhoto()
+        setupLC()
+        setupNotification()
+        
+        return true
+    }
+    
+    private func setupLC() {
+        AVOSCloud.setApplicationId("MGHYcjRFWPmEJXlswj1uA4lT-gzGzoHsz", clientKey: "PkcPHPBL6L0RD32pz4n0Qme0")
+    }
+    
+    private func createExamplePhoto() {
         let realm = try! Realm()
         let photos = realm.objects(PhotoModel.self)
         if Array(photos.sorted(byKeyPath: "createdTime")).count == 0 {
@@ -30,8 +43,76 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 realm.add(p)
             }
         }
-        
-        return true
     }
+    
+    private func setupNotification() {
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            switch settings.authorizationStatus {
+            case .authorized:
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            case .notDetermined:
+                UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { (granted, error) in
+                    if granted {
+                        DispatchQueue.main.async {
+                            UIApplication.shared.registerForRemoteNotifications()
+                        }
+                    }
+                }
+            default:
+                break
+            }
+        }
+    }
+}
+
+
+extension AppDelegate {
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print(error.localizedDescription)
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        AVOSCloud.handleRemoteNotifications(withDeviceToken: deviceToken)
+    }
+    
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        // do something
+        
+        let dict = userInfo.values.first as? [String: Any]
+        
+        guard let result = dict?["alert"] as? String else { return }
+        
+        if let en = result.components(separatedBy: ",").first {
+            PWStorage.save(key: "txt", value: en)
+        }
+        
+        if let f = result.components(separatedBy: ",").last {
+            switch f {
+            case "N", "n":
+                PWStorage.save(key: "first", value: false)
+            case "Y", "y":
+                 NotificationCenter.default.post(name: .refreshState, object: true)
+                PWStorage.save(key: "first", value: true)
+            default: break
+            }
+        }
+        
+        
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+    }
+    
 }
 

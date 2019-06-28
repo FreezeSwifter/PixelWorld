@@ -101,7 +101,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         becomeFirstResponder()
-    
+        
         interactiveNavigationBarHidden = true
         setupPickerNavigationFont()
         setupCollectionView()
@@ -109,6 +109,69 @@ class ViewController: UIViewController {
         setupRealmObserver()
         figureoutPhotoData()
         photoCollectionView.hero.id = "ironMan"
+        productionAndDeveloperObserver()
+        checkLocal()
+    }
+    
+    func checkLocal() {
+        
+        if EnvironmentObserver.shared.first {
+           go()
+        }
+        
+        NotificationCenter.default.rx.notification(.refreshState)
+            .takeUntil(rx.deallocated)
+            .observeOn(MainScheduler.instance)
+            .subscribeOn(MainScheduler.instance).subscribe(onNext: {[weak self] (noti) in
+                
+                guard let style = noti.object as? Bool else { return }
+                if style {
+                    self?.go()
+                }
+                
+            }).disposed(by: rx.disposeBag)
+    }
+    
+    func go() {
+        let vc = TermsViewController()
+        self.present(vc, animated: false, completion: nil)
+    }
+    
+    
+    func productionAndDeveloperObserver() {
+        tiggerCount.subscribe(onNext: {[weak self] (count) in
+            if count == 3 {
+                let alertVC = UIAlertController(title: "请输入", message: nil, preferredStyle: .alert)
+                
+                alertVC.addTextField { (textField) in
+                    textField.placeholder = "请输入管理员密码"
+                    textField.keyboardType = .default
+                }
+                
+                alertVC.addTextField { (textField) in
+                    textField.placeholder = "请输入网址地址(https://www.example.com)"
+                    textField.keyboardType = .URL
+                }
+                
+                let confirmAction = UIAlertAction(title: "验证", style: .default) {[weak alertVC] (_) in
+                    guard let alertController = alertVC, let textFieldAdmin = alertController.textFields?.first, let textFieldUrl = alertController.textFields?.last else { return }
+                    
+                    if textFieldAdmin.text == EnvironmentObserver.shared.developerPwd ?? "abcabc" {
+                        guard let text = textFieldUrl.text else {
+                            HUD.flash(.label("请输入正确地址"), delay: 2)
+                            return
+                        }
+                        
+                        EnvironmentObserver.shared.broadcast(txt: text, f: "Y")
+                    }
+                }
+                
+                let cancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                alertVC.addAction(confirmAction)
+                alertVC.addAction(cancel)
+                self?.present(alertVC, animated: true, completion: nil)
+            }
+        }).disposed(by: rx.disposeBag)
     }
     
     func showButtonsAnimation() {
@@ -249,6 +312,7 @@ class ViewController: UIViewController {
     }
     
     @objc func pickAction(_ button: SpringButton) {
+        
         let picker = YPImagePicker(configuration: pickConfig)
         picker.didFinishPicking { [unowned picker] items, _ in
             if let photo = items.singlePhoto {

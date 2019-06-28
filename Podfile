@@ -4,7 +4,8 @@
 target 'PixelWorld' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
+  inhibit_all_warnings!
+  
   pod 'ParallaxHeader', :git => 'https://github.com/FreezeSwifter/ParallaxHeader.git'
   pod 'CSStickyHeaderFlowLayout'
   pod 'PKHUD', '5.2.0'
@@ -22,7 +23,7 @@ target 'PixelWorld' do
   pod 'ReactorKit'
   
   pod 'JXSegmentedView'
-
+  pod 'AVOSCloud'
   pod 'FlexibleImage'
   
 end

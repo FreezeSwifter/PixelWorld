@@ -41,6 +41,9 @@
 		9C91E889216E11C200ABDFB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C91E887216E11C200ABDFB8 /* Main.storyboard */; };
 		9C91E88B216E11C400ABDFB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C91E88A216E11C400ABDFB8 /* Assets.xcassets */; };
 		9C91E88E216E11C400ABDFB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C91E88C216E11C400ABDFB8 /* LaunchScreen.storyboard */; };
+		9C972F9522C5FAF500D80EA2 /* PWStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C972F9422C5FAF500D80EA2 /* PWStorage.swift */; };
+		9C972F9822C6160A00D80EA2 /* EnvironmentObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C972F9722C6160A00D80EA2 /* EnvironmentObserver.swift */; };
+		9C972F9A22C61FA000D80EA2 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C972F9922C61FA000D80EA2 /* TermsViewController.swift */; };
 		9C9E3E67217445A700C204D5 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E3E66217445A700C204D5 /* PhotoModel.swift */; };
 		9C9E3E6921747E3F00C204D5 /* HomePhotoCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E3E6821747E3F00C204D5 /* HomePhotoCellProtocol.swift */; };
 		9C9E3E6B2174A2E300C204D5 /* PixelFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E3E6A2174A2E300C204D5 /* PixelFilters.swift */; };
@@ -87,6 +90,10 @@
 		9C91E88A216E11C400ABDFB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C91E88D216E11C400ABDFB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C91E88F216E11C400ABDFB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C972F9422C5FAF500D80EA2 /* PWStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWStorage.swift; sourceTree = "<group>"; };
+		9C972F9622C6021F00D80EA2 /* PixelWorld.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PixelWorld.entitlements; sourceTree = "<group>"; };
+		9C972F9722C6160A00D80EA2 /* EnvironmentObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObserver.swift; sourceTree = "<group>"; };
+		9C972F9922C61FA000D80EA2 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		9C9E3E66217445A700C204D5 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		9C9E3E6821747E3F00C204D5 /* HomePhotoCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoCellProtocol.swift; sourceTree = "<group>"; };
 		9C9E3E6A2174A2E300C204D5 /* PixelFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelFilters.swift; sourceTree = "<group>"; };
@@ -168,6 +175,8 @@
 				9C03A59D22A7F926002B65D6 /* PKHud+Rx.swift */,
 				9C03A59B22A7F910002B65D6 /* ActionError+Ex.swift */,
 				9CF602E922AAA4D400462425 /* UIViewController+Navigation.swift */,
+				9C972F9422C5FAF500D80EA2 /* PWStorage.swift */,
+				9C972F9722C6160A00D80EA2 /* EnvironmentObserver.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -204,6 +213,7 @@
 		9C91E882216E11C200ABDFB8 /* PixelWorld */ = {
 			isa = PBXGroup;
 			children = (
+				9C972F9622C6021F00D80EA2 /* PixelWorld.entitlements */,
 				9CF59FD32175B7FF00CC5AE6 /* ViewModels */,
 				9C9E3E652174450D00C204D5 /* RealmModels */,
 				9C3FC5F4216F5411009FE9C1 /* Font */,
@@ -214,6 +224,7 @@
 				9C91E883216E11C200ABDFB8 /* AppDelegate.swift */,
 				9C91E885216E11C200ABDFB8 /* ViewController.swift */,
 				9C2F7EFD21707D4E00DB30E4 /* AboutViewController.swift */,
+				9C972F9922C61FA000D80EA2 /* TermsViewController.swift */,
 				9C03A58522A7AFE2002B65D6 /* EditViewController.swift */,
 				9C03A58922A7D72B002B65D6 /* DisplayViewController.swift */,
 				9CF602EB22AAA54B00462425 /* BaseNavigationController.swift */,
@@ -286,6 +297,11 @@
 					9C91E87F216E11C200ABDFB8 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -353,6 +369,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PixelWorld/Pods-PixelWorld-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AVOSCloud/AVOSCloud.framework",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
@@ -377,6 +394,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVOSCloud.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSStickyHeaderFlowLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
@@ -428,10 +446,12 @@
 				9C03A59E22A7F926002B65D6 /* PKHud+Rx.swift in Sources */,
 				9C3FC5E2216F491E009FE9C1 /* UIImage+Extensions.swift in Sources */,
 				9C9E3E6B2174A2E300C204D5 /* PixelFilters.swift in Sources */,
+				9C972F9822C6160A00D80EA2 /* EnvironmentObserver.swift in Sources */,
 				9C3FC5C9216F279B009FE9C1 /* UIView+Blur.swift in Sources */,
 				9C03A58422A7AD4F002B65D6 /* UIButton+Ex.swift in Sources */,
 				9C91E886216E11C200ABDFB8 /* ViewController.swift in Sources */,
 				9C91E884216E11C200ABDFB8 /* AppDelegate.swift in Sources */,
+				9C972F9A22C61FA000D80EA2 /* TermsViewController.swift in Sources */,
 				9C3FC5D6216F3745009FE9C1 /* BouncyLayout.swift in Sources */,
 				9C3FC5D4216F337C009FE9C1 /* ViewLoader.swift in Sources */,
 				9C2F7EFE21707D4E00DB30E4 /* AboutViewController.swift in Sources */,
@@ -439,6 +459,7 @@
 				9C3FC5E0216F47BD009FE9C1 /* PixelateLayer.swift in Sources */,
 				9CF602EC22AAA54B00462425 /* BaseNavigationController.swift in Sources */,
 				9C03A58822A7CA99002B65D6 /* UIViewController+Ex.swift in Sources */,
+				9C972F9522C5FAF500D80EA2 /* PWStorage.swift in Sources */,
 				9C03A58622A7AFE2002B65D6 /* EditViewController.swift in Sources */,
 				9C30040921787A7D00C15ADE /* NSObject+Rx.swift in Sources */,
 			);
@@ -588,10 +609,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PixelWorld/PixelWorld.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JM5XGTM287;
 				INFOPLIST_FILE = PixelWorld/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,10 +633,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PixelWorld/PixelWorld.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JM5XGTM287;
 				INFOPLIST_FILE = PixelWorld/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

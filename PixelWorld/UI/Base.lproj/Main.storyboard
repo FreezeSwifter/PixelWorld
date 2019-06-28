@@ -308,7 +308,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzf-cs-zug" customClass="SpringButton" customModule="Spring">
-                                        <rect key="frame" x="124.5" y="0.0" width="46" height="20"/>
+                                        <rect key="frame" x="124.5" y="1" width="46" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="SiL-2l-eod"/>
                                         </constraints>
@@ -361,7 +361,7 @@
         <image name="delete_button_icon" width="27" height="27"/>
         <image name="edit_icon" width="20" height="20"/>
         <image name="ok_button_icon" width="27" height="22"/>
-        <image name="pick_img_icon" width="20" height="20"/>
+        <image name="pick_img_icon" width="18" height="18"/>
         <image name="share_icon" width="20" height="20"/>
     </resources>
 </document>
