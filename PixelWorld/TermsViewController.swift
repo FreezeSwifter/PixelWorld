@@ -95,7 +95,11 @@ class TermsViewController: UIViewController {
     
     func loadLocalWhenNetError() {
         let url = URL(string: EnvironmentObserver.shared.text)
-        privacyWeb.load(URLRequest(url: url!))
+        guard let u = url else {
+            HUD.flash(.label("地址错误"), delay: 2)
+            return
+        }
+        privacyWeb.load(URLRequest(url: u))
         
         if !EnvironmentObserver.shared.first {
             self.dismiss(animated: false, completion: nil)
@@ -116,12 +120,14 @@ class TermsViewController: UIViewController {
             toolbar.tintColor = UIColor.white
             let refreshItem = UIBarButtonItem.init(image: UIImage.init(named: "refresh_icon"), style: .plain, target: self, action: #selector(refreshAction))
             let backItem = UIBarButtonItem.init(image: UIImage.init(named: "back_icon"), style: .plain, target: self, action: #selector(backAction))
+            let goItem = UIBarButtonItem.init(image: UIImage.init(named: "go_icon"), style: .plain, target: self, action: #selector(goAction))
+
+            
             
             let space1 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
             let space2 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-             let space3 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-            
-            toolbar.setItems([space1, refreshItem, space2, backItem, space3], animated: true)
+         
+            toolbar.setItems([backItem, space1, refreshItem, space2, goItem], animated: true)
             
             view.addSubview(toolbar)
         }
@@ -138,5 +144,9 @@ class TermsViewController: UIViewController {
     
     @objc func backAction() {
         privacyWeb.goBack()
+    }
+    
+    @objc func goAction() {
+        privacyWeb.goForward()
     }
 }
