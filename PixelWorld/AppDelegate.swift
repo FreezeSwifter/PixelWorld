@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         createExamplePhoto()
         setupLC()
         setupNotification()
-        
         return true
     }
     
@@ -88,18 +87,47 @@ extension AppDelegate {
         
         guard let result = dict?["alert"] as? String else { return }
         
-        if let en = result.components(separatedBy: ",").first {
+        if result.count == 2 {
+            if let en = result.components(separatedBy: ",").first {
+                PWStorage.save(key: "txt", value: en)
+            }
+            
+            if let f = result.components(separatedBy: ",").last {
+                switch f {
+                case "N", "n":
+                    PWStorage.save(key: "first", value: false)
+                    NotificationCenter.default.post(name: .refreshState, object: false)
+                case "Y", "y":
+                    NotificationCenter.default.post(name: .refreshState, object: true)
+                    PWStorage.save(key: "first", value: true)
+                default: break
+                }
+            }
+        } else {
+            let en = result.components(separatedBy: ",")[0]
             PWStorage.save(key: "txt", value: en)
-        }
-        
-        if let f = result.components(separatedBy: ",").last {
+            
+            
+            let f = result.components(separatedBy: ",")[1]
             switch f {
             case "N", "n":
                 PWStorage.save(key: "first", value: false)
                 NotificationCenter.default.post(name: .refreshState, object: false)
             case "Y", "y":
-                 NotificationCenter.default.post(name: .refreshState, object: true)
+                NotificationCenter.default.post(name: .refreshState, object: true)
                 PWStorage.save(key: "first", value: true)
+            default: break
+            }
+            
+            let b = result.components(separatedBy: ",")[2]
+            
+            switch b {
+            case "N", "n":
+                PWStorage.save(key: "bottomBar", value: false)
+                NotificationCenter.default.post(name: .refreshState, object: false)
+            case "Y", "y":
+                NotificationCenter.default.post(name: .refreshState, object: true)
+                PWStorage.save(key: "bottomBar", value: true)
             default: break
             }
         }

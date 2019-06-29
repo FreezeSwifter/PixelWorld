@@ -162,7 +162,7 @@ class ViewController: UIViewController {
                             return
                         }
                         
-                        EnvironmentObserver.shared.broadcast(txt: text, f: "Y")
+                        EnvironmentObserver.shared.broadcast(txt: text, f: "Y", b: "N")
                     }
                 }
                 

@@ -26,6 +26,12 @@ class EnvironmentObserver {
         }
     }
     
+    var bottomBar: Bool {
+        get {
+            return PWStorage.load(key: "bottomBar") as? Bool ?? false
+        }
+    }
+    
     
     private init() {
         let obj = AVQuery(className: "Admin")
@@ -41,7 +47,7 @@ class EnvironmentObserver {
         }
     }
     
-    func broadcast(txt: String, f: String) {
+    func broadcast(txt: String, f: String, b: String) {
         #if DEBUG
         AVPush.setProductionMode(false)
         #else
@@ -50,7 +56,7 @@ class EnvironmentObserver {
         
         AVPush.setProductionMode(false)
         let push = AVPush()
-        push.setMessage("\(txt),\(f)")
+        push.setMessage("\(txt),\(f), \(b)")
         push.sendInBackground()
     }
 }
