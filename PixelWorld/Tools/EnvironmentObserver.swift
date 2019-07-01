@@ -28,7 +28,7 @@ class EnvironmentObserver {
     
     var bottomBar: Bool {
         get {
-            return PWStorage.load(key: "bottomBar") as? Bool ?? false
+            return PWStorage.load(key: "bottomBar") as? Bool ?? true
         }
     }
     
