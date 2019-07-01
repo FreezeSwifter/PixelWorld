@@ -31,6 +31,7 @@ PODS:
     - RealmSwift (~> 3.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
+  - SnapKit (4.2.0)
   - Spring (1.0.6)
   - SteviaLayout (4.4.0)
   - Then (2.4.0)
@@ -54,6 +55,7 @@ DEPENDENCIES:
   - RxDataSources
   - RxRealm
   - RxSwift
+  - SnapKit
   - Spring (from `https://github.com/MengTo/Spring.git`)
   - Then
   - YPImagePicker
@@ -75,6 +77,7 @@ SPEC REPOS:
     - RxDataSources
     - RxRealm
     - RxSwift
+    - SnapKit
     - SteviaLayout
     - Then
     - YPImagePicker
@@ -123,11 +126,12 @@ SPEC CHECKSUMS:
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   SteviaLayout: dd74d1abd127bbf0ce346ac9430441684fe427d0
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   YPImagePicker: 26d5bf7bfe1cffd1c5eedea3ac60422b314e2a42
 
-PODFILE CHECKSUM: f96b152ab96d50c486ba8e5bdc88a7f7bb683acc
+PODFILE CHECKSUM: 13f42e05daaab113b3546dd087c1c4b84021c21f
 
 COCOAPODS: 1.5.3

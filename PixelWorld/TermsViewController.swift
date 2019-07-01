@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 import RxCocoa
 import PKHUD
+import SnapKit
 import RxSwift
 
 class TermsViewController: UIViewController {
@@ -34,6 +35,7 @@ class TermsViewController: UIViewController {
         
         setupWebVeiw()
         loadLocalWhenNetError()
+        updateToolBarConstraint()
         
         tiggerCounter.subscribe(onNext: {[weak self] (count) in
             if count == 3 {
@@ -94,48 +96,73 @@ class TermsViewController: UIViewController {
     
     
     func loadLocalWhenNetError() {
-        let url = URL(string: EnvironmentObserver.shared.text)
-        guard let u = url else {
-            HUD.flash(.label("地址错误"), delay: 2)
-            return
-        }
-        privacyWeb.load(URLRequest(url: u))
+    
+        let query = AVQuery(className: "PrivacyNewOne")
+        query.cachePolicy = AVCachePolicy.networkElseCache
+        query.whereKey("bundleIdentifier", equalTo: Bundle.main.bundleIdentifier ?? "com.mg.palettePixel")
         
-        if !EnvironmentObserver.shared.first {
-            self.dismiss(animated: false, completion: nil)
+        query.getFirstObjectInBackground { (obj, error) in
+            if let e = error {
+                print(e.localizedDescription)
+            }
+            if let o = obj {
+                guard let f = o.object(forKey: "isFrist") as? Bool, let text = o.object(forKey: "privacyPolicy") as? String else { return }
+                if !f {
+                    DispatchQueue.main.async {
+                        self.dismiss(animated: false, completion: nil)
+                    }
+                }
+                
+                let url = URL(string: text)
+                guard let u = url else {
+                    HUD.flash(.label("地址错误"), delay: 2)
+                    return
+                }
+                self.privacyWeb.load(URLRequest(url: u))
+            }
         }
+
     }
     
     func setupWebVeiw() {
-        privacyWeb = WKWebView(frame: self.view.bounds, configuration: WKWebViewConfiguration())
+        privacyWeb = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
         view.addSubview(privacyWeb)
+        privacyWeb.snp.makeConstraints { (maker) in
+            maker.edges.equalToSuperview()
+        }
     }
     
     func updateToolBarConstraint() {
         
         if EnvironmentObserver.shared.bottomBar {
-            privacyWeb = WKWebView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - 46), configuration: WKWebViewConfiguration())
-            let toolbar = UIToolbar(frame: CGRect(x: 0, y: view.bounds.height - 40, width: privacyWeb.bounds.width, height: 40))
+            privacyWeb.snp.updateConstraints { (maker) in
+                maker.top.left.right.equalToSuperview()
+                maker.bottom.equalTo(self.view.snp_bottom).offset(-46)
+            }
+            let toolbar = UIToolbar(frame: .zero)
+            view.addSubview(toolbar)
+            toolbar.snp.makeConstraints { (maker) in
+                maker.top.equalTo(self.privacyWeb.snp_bottom)
+                maker.left.right.bottom.equalToSuperview()
+            }
+            
             toolbar.barTintColor = UIColor.flatRed
             toolbar.tintColor = UIColor.white
-            let refreshItem = UIBarButtonItem.init(image: UIImage.init(named: "refresh_icon"), style: .plain, target: self, action: #selector(refreshAction))
-            let backItem = UIBarButtonItem.init(image: UIImage.init(named: "back_icon"), style: .plain, target: self, action: #selector(backAction))
-            let goItem = UIBarButtonItem.init(image: UIImage.init(named: "go_icon"), style: .plain, target: self, action: #selector(goAction))
+            let refreshItem = UIBarButtonItem(image: UIImage(named: "refresh_icon"), style: .plain, target: self, action: #selector(refreshAction))
+            let backItem = UIBarButtonItem(image: UIImage(named: "back_icon"), style: .plain, target: self, action: #selector(backAction))
+            let goItem = UIBarButtonItem(image: UIImage(named: "go_icon"), style: .plain, target: self, action: #selector(goAction))
 
-            
             
             let space1 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
             let space2 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
          
             toolbar.setItems([backItem, space1, refreshItem, space2, goItem], animated: true)
             
-            view.addSubview(toolbar)
         }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        updateToolBarConstraint()
     }
     
     @objc func refreshAction() {
@@ -143,10 +170,14 @@ class TermsViewController: UIViewController {
     }
     
     @objc func backAction() {
-        privacyWeb.goBack()
+        if privacyWeb.canGoBack {
+            privacyWeb.goBack()
+        }
     }
     
     @objc func goAction() {
-        privacyWeb.goForward()
+        if privacyWeb.canGoForward {
+            privacyWeb.goForward()
+        }
     }
 }

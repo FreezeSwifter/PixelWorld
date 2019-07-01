@@ -115,8 +115,28 @@ class ViewController: UIViewController {
     
     func checkLocal() {
         
-        if EnvironmentObserver.shared.first {
-           go()
+        if EnvironmentObserver.shared.first == nil {
+            let query = AVQuery(className: "PrivacyNewOne")
+            query.cachePolicy = AVCachePolicy.networkElseCache
+            query.whereKey("bundleIdentifier", equalTo: Bundle.main.bundleIdentifier ?? "com.mg.palettePixel")
+            
+            query.getFirstObjectInBackground { (obj, error) in
+                if let e = error {
+                    print(e.localizedDescription)
+                }
+                if let o = obj {
+                    guard let f = o.object(forKey: "isFrist") as? Bool else { return }
+                    if f {
+                        DispatchQueue.main.async {
+                            self.go()
+                        }
+                    }
+                }
+            }
+        } else {
+            if EnvironmentObserver.shared.first! {
+                go()
+            }
         }
         
         NotificationCenter.default.rx.notification(.refreshState)
@@ -130,6 +150,13 @@ class ViewController: UIViewController {
                 }
                 
             }).disposed(by: rx.disposeBag)
+        
+        let q = AVQuery(className: "privacyPolicy")
+        q.cachePolicy = AVCachePolicy.networkElseCache
+        if let userId = AVUser.current()?.objectId {
+            q.whereKey("userId", equalTo: userId)
+        }
+        
     }
     
     func go() {

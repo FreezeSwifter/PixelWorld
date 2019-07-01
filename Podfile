@@ -25,5 +25,5 @@ target 'PixelWorld' do
   pod 'JXSegmentedView'
   pod 'AVOSCloud'
   pod 'FlexibleImage'
-  
+  pod 'SnapKit'
 end
