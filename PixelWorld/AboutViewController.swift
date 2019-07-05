@@ -7,6 +7,7 @@
 //
 import Spring
 import UIKit
+import StoreKit
 
 class AboutViewController: UITableViewController {
     
@@ -26,6 +27,8 @@ class AboutViewController: UITableViewController {
         tableView.hero.id = "ironMan"
         tableView.hero.modifiers = [.fade, .scale(0.5)]
         descriptionLabel.animate()
+        
+        checkAndAskForReview()
     }
     
     func setupTableView() {
@@ -44,5 +47,42 @@ class AboutViewController: UITableViewController {
             }
             
         }
+    }
+}
+
+
+extension AboutViewController {
+    
+    private func requestReview() {
+        SKStoreReviewController.requestReview()
+    }
+    
+    fileprivate func checkAndAskForReview() {
+        
+        guard let appOpenCount = PWStorage.load(key: "AppOpenCount") as? Int else {
+            PWStorage.save(key: "AppOpenCount", value: 1)
+            return
+        }
+        
+        switch appOpenCount {
+        case 1,5:
+            requestReview()
+        case _ where appOpenCount % 100 == 0 :
+            requestReview()
+        default:
+            print("App run count is : \(appOpenCount)")
+            break;
+        }
+        
+        AboutViewController.incrementAppOpenedCount()
+    }
+    
+    private static func incrementAppOpenedCount() {
+        guard var appOpenCount = PWStorage.load(key: "AppOpenCount") as? Int else {
+            PWStorage.save(key: "AppOpenCount", value: 1)
+            return
+        }
+        appOpenCount += 1
+        PWStorage.save(key: "AppOpenCount", value: appOpenCount)
     }
 }

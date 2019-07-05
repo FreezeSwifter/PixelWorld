@@ -10,6 +10,9 @@ PODS:
   - Differentiator (3.1.0)
   - FlexibleImage (1.10)
   - Hero (1.4.0)
+  - JCore (2.1.0)
+  - JPush (3.2.1):
+    - JCore (< 3.0.0, >= 2.0.0)
   - JXSegmentedView (0.0.13)
   - ParallaxHeader (2.0.0)
   - PKHUD (5.2.0)
@@ -46,6 +49,7 @@ DEPENDENCIES:
   - CSStickyHeaderFlowLayout
   - FlexibleImage
   - Hero (from `https://github.com/HeroTransitions/Hero.git`, branch `swift-4.2`)
+  - JPush
   - JXSegmentedView
   - ParallaxHeader (from `https://github.com/FreezeSwifter/ParallaxHeader.git`)
   - PKHUD (= 5.2.0)
@@ -67,6 +71,8 @@ SPEC REPOS:
     - CSStickyHeaderFlowLayout
     - Differentiator
     - FlexibleImage
+    - JCore
+    - JPush
     - JXSegmentedView
     - PKHUD
     - PryntTrimmerView
@@ -115,6 +121,8 @@ SPEC CHECKSUMS:
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   FlexibleImage: 22bf26c42f1b6299b94bc5001e6ec310c94e6786
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  JCore: cc373c9c9d82dcf2b0263d157abd99251ef76902
+  JPush: a1ff8b8ec53fa3419b414946e4db4efa313baeae
   JXSegmentedView: adb975e3af18ba9934e9fd3740e536173eb468ab
   ParallaxHeader: 06a25d4063ea007c03f0e4e3901827f665877c5f
   PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
@@ -132,6 +140,6 @@ SPEC CHECKSUMS:
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   YPImagePicker: 26d5bf7bfe1cffd1c5eedea3ac60422b314e2a42
 
-PODFILE CHECKSUM: 13f42e05daaab113b3546dd087c1c4b84021c21f
+PODFILE CHECKSUM: 05e9f7bb2c67300ea17b5e99913df59c473282c2
 
 COCOAPODS: 1.5.3

@@ -26,4 +26,5 @@ target 'PixelWorld' do
   pod 'AVOSCloud'
   pod 'FlexibleImage'
   pod 'SnapKit'
+  pod 'JPush'
 end

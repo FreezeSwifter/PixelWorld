@@ -24,7 +24,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         createExamplePhoto()
         setupLC()
         setupNotification()
+        setupJPush(launchOptions: launchOptions)
         return true
+    }
+    
+    private func setupJPush(launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        let jpEntity = JPUSHRegisterEntity()
+        jpEntity.types = Int(UInt8(JPAuthorizationOptions.alert.rawValue) | UInt8(JPAuthorizationOptions.badge.rawValue) | UInt8(JPAuthorizationOptions.sound.rawValue))
+        JPUSHService.register(forRemoteNotificationConfig: jpEntity, delegate: self)
+        #if DEBUG
+        JPUSHService.setup(withOption: launchOptions, appKey: "9fe9b534aa7f894b67edd5a7", channel: "iOS", apsForProduction: false)
+        #else
+        JPUSHService.setup(withOption: launchOptions, appKey: "9fe9b534aa7f894b67edd5a7", channel: "iOS", apsForProduction: true)
+        #endif
     }
     
     private func setupLC() {
@@ -67,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
-extension AppDelegate {
+extension AppDelegate: JPUSHRegisterDelegate {
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print(error.localizedDescription)
@@ -75,6 +87,7 @@ extension AppDelegate {
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         
+        JPUSHService.registerDeviceToken(deviceToken)
         AVOSCloud.handleRemoteNotifications(withDeviceToken: deviceToken)
     }
     
@@ -139,6 +152,35 @@ extension AppDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+    }
+    
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, willPresent notification: UNNotification!, withCompletionHandler completionHandler: ((Int) -> Void)!) {
+        
+        let userInfo = notification.request.content.userInfo
+        print(userInfo.description)
+        if (notification.request.trigger?.isKind(of: UNPushNotificationTrigger.self))! {
+            JPUSHService.handleRemoteNotification(userInfo)
+        }
+        completionHandler(Int(UNNotificationPresentationOptions.alert.rawValue))
+    }
+    
+    
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, didReceive response: UNNotificationResponse!, withCompletionHandler completionHandler: (() -> Void)!) {
+        
+        let userInfo = response.notification.request.content.userInfo
+        
+        if (response.notification.request.trigger?.isKind(of: UNPushNotificationTrigger.self))! {
+            let invalidLogin = userInfo["Type"] as? String
+            if let invalidLogin = invalidLogin, invalidLogin == "1" {
+                
+            }
+            JPUSHService.handleRemoteNotification(userInfo)
+        }
+        completionHandler()
+    }
+    
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, openSettingsFor notification: UNNotification?) {
         
     }
     
